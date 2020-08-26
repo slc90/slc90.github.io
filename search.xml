@@ -147,63 +147,11 @@
     
     
     <entry>
-      <title>更新过程</title>
-      <link href="/2020/03/11/%E6%9B%B4%E6%96%B0%E8%BF%87%E7%A8%8B/"/>
-      <url>/2020/03/11/%E6%9B%B4%E6%96%B0%E8%BF%87%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><ol><li>和Possion Process类似,只是等待时间的概率分布不一定是指数分布</li><li>令$M(t)=E[N(t)]$,可推得$M(t)=\sum\limits_{k=1}^{\infty}F_{k}(t)$,其中$F_{k}(t)$就是第k次更新时刻的概率分布(计算$F_{k}$得靠递归,一般没法计算)</li></ol><h1 id="计数器模型"><a href="#计数器模型" class="headerlink" title="计数器模型"></a>计数器模型</h1><h2 id="I-型"><a href="#I-型" class="headerlink" title="I 型"></a><strong><em>I</em></strong> 型</h2><p>1.现实模型是粒子计数器,如:Geiger-Muller计数器</p><img src="/2020/03/11/%E6%9B%B4%E6%96%B0%E8%BF%87%E7%A8%8B/type_I.png" class=""><p>$X_{i}$是粒子达到的时刻间隔($X_{i}$独立同分布);$Y_{i}$(独立同分布)是粒子达到后计数器的锁定时间,此时无法记录到达的粒子;$Z_{i}$是记录到的粒子时刻间隔.明显{$Z_{i}$}是独立同分布的,所以构成了一个更新过程.<br>2. 只要搞出$Z_{1}$的分布就ok.<br>$Z_{1}=Y_{1}+\gamma_{Y_{1}}$($\gamma$是excess life,在Possion Process中是指数分布),所以:<br>$P(Z_{1} \le z)=\int\limits_{0}^{z}P(y+\gamma_{y} \le z|Y_{1}=y)dG(y)$,其中$G(y)$是$Y_{1}$的分布.<br>在Possion Process下,$P(Z_{1} \le z)=\int\limits_{0}^{z}G(z-y) \lambda e^{-\lambda y}dy$</p><h2 id="II-型"><a href="#II-型" class="headerlink" title="II 型"></a><strong><em>II</em></strong> 型</h2><img src="/2020/03/11/%E6%9B%B4%E6%96%B0%E8%BF%87%E7%A8%8B/type_II.png" class=""><p>与type_I型不同的是,在锁定时间内如果还达到了新的粒子,是有可能会延长锁定时间的.<br>这种情况很复杂,在此给出一个简单结论:假设在时间(0,t]内粒子到达的时刻服从均匀分布.则<br>P(在时刻t计数器是自由的|(0,t]时间内达到了n个粒子)=$(\int\limits_{0}^{t}G(t-y)\frac{1}{t}dy)^{n}$<br>理解为:粒子在时刻y到达的概率为$\int\limits_{y}^{y+dy}\frac{1}{t}du=\frac{1}{t}dy$,锁定时间在t时刻已经结束的概率为$G(t-y)$(也就是锁定时间小于等于t-y的概率),再对所有时刻积分就得到一个粒子的情况.n个粒子的是独立的,所以再求幂.<br>假设在(0,t]时间内出现粒子的个数服从泊松分布,那么时刻t计数器处于自由的概率为:<br>$p(t)=\sum\limits_{j=0}^{\infty}(\int\limits_{0}^{t}G(t-y)\frac{1}{t}dy)^{j}\frac{(\lambda t)^{j}e^{-\lambda t}}{j!}=e^{-\lambda\int\limits_{0}^{t}[1-G(y)]dy}$(注意把公式中的积分整体当成H(t))<br>在时间(0,t]内记录到的粒子的期望个数$M_{R}(t)=\lambda p(t)$,$M_{R}=0$(推导过程基本理解了,但有一处仍然有疑问)</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>神经元和神经胶质</title>
       <link href="/2020/03/09/%E7%A5%9E%E7%BB%8F%E5%85%83%E5%92%8C%E7%A5%9E%E7%BB%8F%E8%83%B6%E8%B4%A8/"/>
       <url>/2020/03/09/%E7%A5%9E%E7%BB%8F%E5%85%83%E5%92%8C%E7%A5%9E%E7%BB%8F%E8%83%B6%E8%B4%A8/</url>
       
         <content type="html"><![CDATA[<h1 id="典型的一个神经元"><a href="#典型的一个神经元" class="headerlink" title="典型的一个神经元"></a>典型的一个神经元</h1><img src="/2020/03/09/%E7%A5%9E%E7%BB%8F%E5%85%83%E5%92%8C%E7%A5%9E%E7%BB%8F%E8%83%B6%E8%B4%A8/neuron.png" class="" title="神经元">]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>连续时间的马尔可夫链</title>
-      <link href="/2020/03/09/%E8%BF%9E%E7%BB%AD%E6%97%B6%E9%97%B4%E7%9A%84%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE/"/>
-      <url>/2020/03/09/%E8%BF%9E%E7%BB%AD%E6%97%B6%E9%97%B4%E7%9A%84%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Possion-Process"><a href="#Possion-Process" class="headerlink" title="Possion Process"></a>Possion Process</h1><ol><li>Possion Process就是一种独立增量过程,每次增加最多为1.典型例子就是一段时间内接电话次数</li><li>Possion Process的三条性质:<br>(i)$P${$X(t+h)-X(t)=1|X(t)=k$}$=\lambda h + o(h)$ (增加1的情况)<br>(ii)$P${$X(t+h)-X(t)=0|X(t)=k$}$=1 - \lambda h + o(h)$(增加0的情况)<br>(iii)$X(0) = 0$(初始状态次数为0)</li><li>直观上理解:每个等待时间都是个指数分布,参数为$\lambda$.为啥叫泊松分布呢?我觉得是因为:$P${$X(t)=n$}$=\frac{(\lambda t)^{n}e^{-\lambda t}}{n!}$,即:间隔$t$时间内发生次数的概率分布是泊松分布.</li></ol><h1 id="Birth-Process"><a href="#Birth-Process" class="headerlink" title="Birth Process"></a>Birth Process</h1><ol><li>为何叫Birth Process?因为这一过程来源于生物的繁殖.Birth Process与Possion Process区别就在于，这里面的$\lambda$是和已发生事件的次数有关的，即$\lambda$和$k$有关</li><li>于是Possion Process的三个条件就变为:<br>(i)$P${$X(t+h)-X(t)=1|X(t)=k$}$=\lambda_{k} h + o_{1,k}(h)$ (增加1的情况)<br>(ii)$P${$X(t+h)-X(t)=0|X(t)=k$}$=1 - \lambda_{k} h + o_{2,k}(h)$(增加0的情况)<br>(iii)$X(0) = 0$(初始状态次数为0)<br>这里的无穷小$o(h)$和$n,k$有关，原因暂时未知</li><li>定义$P_{n}(t)=P${$X(t)=n$},那么可以依靠上述性质得到一组递归表示的微分方程:<br>$P_{0}^{，}(t)=-\lambda_{0}P_{0}(t)$和$P_{n}^{，}(t)=-\lambda_{n}P_{n}(t)+\lambda_{n-1}P_{n-1}(t)$.这玩意只能递归求解(对于Poisson Process倒是可以归纳求解),其解为:$P_{k}(t)=\lambda_{k-1}e^{-\lambda_{k}t}\int\limits_{0}^{t}e^{\lambda_{k}x}P_{k-1}(x)dx$以及$P_{0}(t)=e^{-\lambda_{0}t}$.</li></ol><h1 id="Yule-Process"><a href="#Yule-Process" class="headerlink" title="Yule Process"></a>Yule Process</h1><ol><li>Yule Process是物理和生物中的一种Birth Process.特殊性在于,$X(0)=N$和$\lambda_{k}=k \beta$</li><li>当$N=1$时，可解得$P_{n}(t)=e^{-\beta t}(1-e^{-\beta t})^{n-1}$和$P_{1}(0)=0$</li><li>当$N$大于1时,解为:$P_{n}(t)=\binom{n-1}{n-N}e^{-N \beta t}(1-e^{-\beta t})^{n-N},n=N,N+1…$</li></ol><h1 id="Possion-Process可以产生二项分布"><a href="#Possion-Process可以产生二项分布" class="headerlink" title="Possion Process可以产生二项分布"></a>Possion Process可以产生二项分布</h1><ol><li>$P${$X(u)=k|X(t)=n$}$=\binom{n}{k}\frac{u^{k}(t-u)^{n-k}}{t^{n}}$</li><li>对于两个独立的Possion Process:$X_{1}(t)$和$X_{2}(t)$:<br>$P${$X_{1}(t)=k|X_{1}(t)+X_{2}(t)=n$}$=\binom{n}{k}(\frac{\lambda_{1}}{\lambda_{1}+\lambda_{2}})^{k}(\frac{\lambda_{2}}{\lambda_{1}+\lambda_{2}})^{n-k}$</li></ol><h1 id="Birth-and-Death-Process"><a href="#Birth-and-Death-Process" class="headerlink" title="Birth and Death Process"></a>Birth and Death Process</h1><ol><li>比Birth多了个Death过程,参数也就不止$\lambda_{k}$,还有$\mu_{k}$</li><li>转移概率的性质也变了一些:<br>(i)$P_{i,i+1}(h)=\lambda_{i}h+o(h)$<br>(ii)$P_{i,i-1}(h)=\mu_{i}h+o(h)$<br>(iii)$P_{i,i}(h)=1-(\lambda_{i}+\mu_{i})h+o(h)$</li><li>这种模型的例子有:线性增长($\lambda$和$\mu$是线性函数)模型,排队模型,基因模型</li><li>直观上理解:等待时间是个指数分布(参数为$\lambda_{i}+\mu_{i}$);突变时,+1概率为$\frac{\lambda_{i}}{\lambda_{i}+\mu_{i}}$,-1概率为$\frac{\mu_{i}}{\lambda_{i}+\mu_{i}}$</li></ol><h1 id="有限状态连续时间Markov-Chain"><a href="#有限状态连续时间Markov-Chain" class="headerlink" title="有限状态连续时间Markov Chain"></a>有限状态连续时间Markov Chain</h1><ol><li>和离散时间类似:$P(t+s)=P(t)P(s)$</li></ol>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>极限状态的马尔可夫链</title>
-      <link href="/2020/03/09/%E6%9E%81%E9%99%90%E7%8A%B6%E6%80%81%E7%9A%84%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE/"/>
-      <url>/2020/03/09/%E6%9E%81%E9%99%90%E7%8A%B6%E6%80%81%E7%9A%84%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE/</url>
-      
-        <content type="html"><![CDATA[<h1 id="该章主要讲重现态和暂态进入重现态的概率-极限状态下"><a href="#该章主要讲重现态和暂态进入重现态的概率-极限状态下" class="headerlink" title="该章主要讲重现态和暂态进入重现态的概率(极限状态下)"></a>该章主要讲重现态和暂态进入重现态的概率(极限状态下)</h1><ol><li>正重现非周期马尔可夫链(现实的绝大多数都是这个)的平稳概率分布(其实就是从重现态到重现态):$\lim\limits_{n\rightarrow\infty}P_{ij}^{n}=\lim\limits_{n\rightarrow\infty}P_{jj}^{n}= \pi_{j}=\sum\limits_{i=0}^{\infty} \pi_{i}P_{ij}$.再加上$\sum\limits_{i=0}^{\infty} \pi_{i}=1$,可以唯一决定$\pi_{i}$</li><li>从暂态$i$到重现态$j$. $\lim\limits_{n\rightarrow\infty}P_{ij}^{n}= \pi_{i}(C)\pi_{j}$.如何计算$\pi_{i}(C)$:$\pi_{i}(C)=\pi_{i}^{1}(C)+\sum\limits_{k}P_{ik}\pi_{k}(C)$($i$和$k$是暂态,$k \neq i$)</li><li>判断一个马尔可夫链是不是暂时性的充分必要条件: 方程组$\sum\limits_{j=0}^{\infty}P_{ij}y_{j}=y_{i},i \neq 0$有一组有界且不恒等的解</li><li>判断一个马尔可夫链是不是重现性的充分条件: 不等式组$\sum\limits_{j=0}^{\infty}P_{ij}y_{j} \leq  y_{i},i \neq 0$,当$y_{i} \rightarrow \infty$时存在一组解</li></ol>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>马尔可夫链</title>
-      <link href="/2020/03/08/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE/"/>
-      <url>/2020/03/08/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE/</url>
-      
-        <content type="html"><![CDATA[<h1 id="该章讲一些马尔可夫链的基本定-例子"><a href="#该章讲一些马尔可夫链的基本定-例子" class="headerlink" title="该章讲一些马尔可夫链的基本定:例子"></a>该章讲一些马尔可夫链的基本定:例子</h1><ol><li>转移矩阵$P$(一步转移矩阵),在平稳下是不变的，非平稳的情况很复杂</li><li>典型的Markov例子:随机游走，排队模型</li><li>n步转移矩阵$P^{(n)}=P^{n}$</li><li>周期性(定义比较奇怪):对于一个状态,该状态的周期定义为:从该状态出发,所有可以回到该状态的步数n的gcd.gcd为1时即该状态非周期.一个Markov链所有状态都为非周期时就称为这个Markov链是非周期的.下图状态1就有{4,8,12…}和{3,6,9…}以及两种相加如{7,10,11,13…}.这些的gcd为1,所以状态1是非周期的<img src="/2020/03/08/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE/state.png" class="" title="状态机作个例子 b"></li><li>重现性(recurrence):从一个状态出发,首次回到该状态的概率为1.$\sum\limits_{n=1}^{\infty}f_{ii}^{n}=1$,等价于$\sum\limits_{n=1}^{\infty}P_{ii}^{n}=\infty$(回到起始状态的期望步数,注意首次).重现性(以及暂时性)和周期性一样，是个类性质，只要类中有一个是可重现的，那就都是.</li><li>重现性经典例子:一维和二维随机游走.三维随机游走就不具有重现性.</li></ol>]]></content>
       
       
       

@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-naiai.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-naiai.png?v=5.1.4">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="模式识别概论 模式识别就是分类,这件事人类已经持续做了数十万年,终于造就了世界上最复杂,高级的分类器—大脑.现在,随着计算机技术的发展,人类希望通过计算机来加强自身分类的技术和正确率,同时也希望计算机获得真正的智能,以此来加强对世界的认识. 模式识别最重要的就是得到能够从本质上把事物分类的特征,第二重要的就是分类的速度和正确率.人脑的非线性远优于计算机,但是线性计算能力则比计算机差很多.随着计算机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="模式识别">
+<meta property="og:url" content="http://yoursite.com/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/index.html">
+<meta property="og:site_name" content=" (´；ω；‘) (´?н?‘) (›´ω&#96;‹ ) ">
+<meta property="og:description" content="模式识别概论 模式识别就是分类,这件事人类已经持续做了数十万年,终于造就了世界上最复杂,高级的分类器—大脑.现在,随着计算机技术的发展,人类希望通过计算机来加强自身分类的技术和正确率,同时也希望计算机获得真正的智能,以此来加强对世界的认识. 模式识别最重要的就是得到能够从本质上把事物分类的特征,第二重要的就是分类的速度和正确率.人脑的非线性远优于计算机,但是线性计算能力则比计算机差很多.随着计算机">
+<meta property="og:image" content="http://yoursite.com/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB%E4%B8%80%E8%88%AC%E6%B5%81%E7%A8%8B.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/PCA%E4%B8%8ELDA.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E9%9A%90%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E5%89%8D%E5%90%91%E7%AE%97%E6%B3%95.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E8%A7%A3%E7%A0%81%E8%BF%87%E7%A8%8B.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E7%9F%A9%E5%BD%A2%E7%AA%97.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/PNN1.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/PNN2.png">
+<meta property="article:published_time" content="2020-03-14T06:33:57.000Z">
+<meta property="article:modified_time" content="2020-04-26T13:07:07.272Z">
+<meta property="article:author" content="mdrs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB%E4%B8%80%E8%88%AC%E6%B5%81%E7%A8%8B.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/03/14/模式识别/"/>
+
+
+
+
+
+  <title>模式识别 |  (´；ω；‘) (´?н?‘) (›´ω`‹ ) </title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title"> (´；ω；‘) (´?н?‘) (›´ω`‹ ) </span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-categories"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mdrs">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content=" (´；ω；‘) (´?н?‘) (›´ω`‹ ) ">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">模式识别</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-14T14:33:57+08:00">
+                2020-03-14
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-26T21:07:07+08:00">
+                2020-04-26
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%82/" itemprop="url" rel="index">
+                    <span itemprop="name">杂</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4.9k
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="模式识别概论"><a href="#模式识别概论" class="headerlink" title="模式识别概论"></a>模式识别概论</h1><ol>
+<li>模式识别就是分类,这件事人类已经持续做了数十万年,终于造就了世界上最复杂,高级的分类器—大脑.现在,随着计算机技术的发展,人类希望通过计算机来加强自身分类的技术和正确率,同时也希望计算机获得真正的智能,以此来加强对世界的认识.</li>
+<li>模式识别最重要的就是得到能够从本质上把事物分类的特征,第二重要的就是分类的速度和正确率.人脑的非线性远优于计算机,但是线性计算能力则比计算机差很多.随着计算机算力的提高,过去一些无法使用的算法,现在已经可以使用了.</li>
+<li>模式识别的一般流程如下图. 其实预处理和特征提取没啥区别,只是预处理中处理的那些噪声很明显以至于不需要专门对其进行分类而已.<img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB%E4%B8%80%E8%88%AC%E6%B5%81%E7%A8%8B.png" class="">
+
+</li>
+</ol>
+<h1 id="贝叶斯决策论"><a href="#贝叶斯决策论" class="headerlink" title="贝叶斯决策论"></a>贝叶斯决策论</h1><p>一句话就是:在已知特征$x$的值时(这个值是测量到的,不是先验知识),样本分到哪一类的概率最大,那就把样本分到那一类.</p>
+<h2 id="二分类"><a href="#二分类" class="headerlink" title="二分类"></a>二分类</h2><p>假设类为$\omega_{1}$和$\omega_{2}$.由贝叶斯公式得:$P(\omega_{i}|x)=\frac{P(x|\omega_{i})P(\omega_{i})}{P(x)}$.分母上的$P(x)$对于所有类都是一样的(特征的概率分布),所以实际计算就是计算$P(x|\omega_{i})P(\omega_{i})$,然后比较大小.对于公式的理解:从特征值中得到更多的信息,然后对先验知识进行修正($P(\omega_{i}|x)$).</p>
+<h2 id="连续的情况"><a href="#连续的情况" class="headerlink" title="连续的情况"></a>连续的情况</h2><ol>
+<li>总的来说就是将某个目标函数(不知道为什么很多教材喜欢叫损失函数,明明实际情况又不是总是关注损失)最值化,教材中是将损失函数最小化.</li>
+<li>已知特征$x$的值时采取行为$\alpha_{i}$的损失为:$R(\alpha_{i}|x)=\sum\limits_{j=1}^{k}\lambda(\alpha_{i}|\omega_{j})P(\omega_{j}|x)$,式中$\lambda$可以理解为:知道样本在$\omega_{j}$类后采取行为$\alpha_{i}$的风险.</li>
+<li>想让总损失最小,那就只要让采取每一个行为的损失$R(\alpha_{i}|x)$最小就行.</li>
+<li>可以把$\alpha_{i}$当做把样本分到$\omega_{i}$类</li>
+<li>一种最简单的风险函数$\lambda(\alpha_{i}|\omega_{j}):<br>\begin{cases}<br>0,i=j \\<br>1,i \neq j<br>\end{cases}<br>$<br>这意味着所有误判都是等价的.此时的损失函数$R(\alpha_{i}|x)=1-P(\omega_{i}|x)$,所以判别准则就是:哪个类后验概率最大就分到那一类</li>
+<li>极小极大化原则:设计一个分类器,对于所有可能的先验分布,损失函数的最大值(最坏情况)最小.方法:让损失函数$R$与先验分布$P(\omega_{i})$无关.<br>对于二分类问题可得到:<br>$R=\lambda_{2,2}+(\lambda_{1,1}-\lambda_{2,2})\int\limits_{R_{1}}p(x|\omega_{1})dx+P(\omega_{1})[(\lambda_{1,1}-\lambda_{2,2})+(\lambda_{2,1}-\lambda_{1,1})\int\limits_{R_{2}}p(x|\omega_{1})dx-(\lambda_{1,2}-\lambda_{2,2})\int\limits_{R_{1}}p(x|\omega_{2})dx]$.于是,让中括号里的=0就Ok.</li>
+</ol>
+<h2 id="多分类问题"><a href="#多分类问题" class="headerlink" title="多分类问题"></a>多分类问题</h2><ol>
+<li>对于$k$个分类器$g_{i}(x),i=1,2…k$,仍然是哪个最大就把$x$分到那一类</li>
+<li>对于$g_{i}(x)$是多元正态分布的情况,讨论协方差$\sum$的三种情况:<br>(i)$\sum_{i}=\sigma I^{2}$,即:每个分类器的各变量之间独立.此时$g_{i}(x)=-\frac{||x-\mu_{i}||^{2}}{2\sigma^{2}}+lnP(\omega_{i})$<br>(ii)$\sum_{i}=\sum$,每个分类器的协方差矩阵都一样(各个分类器离散程度或者说是稳定性相同).此时$g_{i}(x)=-\frac{1}{2}(x-\mu_{i})^{T}\sum^{-1}(x-\mu_{i})+lnP(\omega_{i})$<br>(iii)$\sum_{i}$任意,$g_{i}(x)=x^{T}W_{i}x+w_{i}^{T}x+w_{i_{0}}$,其中<br>$W_{i}=-\frac{1}{2}\sum_{i}^{-1}$<br>$w_{i}=\sum_{i}^{-1}\mu_{i}$<br>$w_{i_{0}}=-\frac{1}{2}\mu_{i}^{T}\sum_{i}^{-1}\mu_{i}-\frac{1}{2}ln|\sum_{i}|+lnP(\omega_{i})$</li>
+</ol>
+<h1 id="最大似然估计和贝叶斯参数估计"><a href="#最大似然估计和贝叶斯参数估计" class="headerlink" title="最大似然估计和贝叶斯参数估计"></a>最大似然估计和贝叶斯参数估计</h1><p>最大似然估计认为参数是个确定的值,贝叶斯参数估计认为参数有自身的概率分布.这和频率学派与贝叶斯学派争论的问题一样,是人们看待世界的角度不同,没有对错之分.</p>
+<h2 id="最大似然估计"><a href="#最大似然估计" class="headerlink" title="最大似然估计"></a>最大似然估计</h2><ol>
+<li>前提:每一类的样本是独立同分布的</li>
+<li>原理:找一个参数值使样本的联合概率分布最大化,即找$\theta$值,使得$\prod\limits_{k=1}^{n}P(x_{k}|\theta)$最大</li>
+</ol>
+<h2 id="贝叶斯参数估计"><a href="#贝叶斯参数估计" class="headerlink" title="贝叶斯参数估计"></a>贝叶斯参数估计</h2><ol>
+<li>假设样本集为$D$.目标为:求得$p(x|D)$,使得$p(x|D)$接近$p(x)$</li>
+<li>核心公式为:$p(x|D)=\int p(x|\mu)p(\mu|D)d\mu$</li>
+<li>估计$p(\mu|D)$时, $p(x|\mu)$的形式已知,只是参数未知,先验分布$p(\mu)$已知.于是,利用贝叶斯公式得$p(\mu|D)=\frac{p(D|\mu)p(\mu)}{\int p(D|\mu)p(\mu)d\mu}$.其中$p(D|\mu)=\prod p(x_{k}|\mu)$</li>
+</ol>
+<h1 id="成分分析与判别函数"><a href="#成分分析与判别函数" class="headerlink" title="成分分析与判别函数"></a>成分分析与判别函数</h1><h2 id="维数问题"><a href="#维数问题" class="headerlink" title="维数问题"></a>维数问题</h2><ol>
+<li>维数太多或者样本太多会导致计算太慢</li>
+<li>解决方法:降维<br>(i)选取所有特征中的一个子集<br>(ii)将几个特征组合到一起</li>
+</ol>
+<h2 id="PCA"><a href="#PCA" class="headerlink" title="PCA"></a>PCA</h2><p>将特征空间组成的矩阵进行特征值分解,然后按特征值大小排列找出对应的特征向量，这些新的特征向量之间是不相关的,方差是依次递减的.选取前k个特征值对应的特征向量作为新的特征,就完成了降维,必然会丢失一点原始样本的信息.实际应用时一般没法特征值分解而采用SVD分解.</p>
+<h2 id="LDA"><a href="#LDA" class="headerlink" title="LDA"></a>LDA</h2><ol>
+<li>PCA和LDA的区别如下图,PCA是找一条通过样本均值的直线进行投影,LDA是找一条任意直线进行投影.目标函数也不一样,PCA是最小化样本与投影间距离之和,而LDA是最大化投影后类间距离,最小化投影后类内距离.<img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/PCA%E4%B8%8ELDA.png" class=""></li>
+<li>投影方式肯定为:$y = w^{T}x$. 定义几个量来衡量目标函数$J(w)$.<br>投影后类均值:$m_{Y_{i}}=\frac{1}{N_{i}}\sum\limits_{y_{j} \in Y_{i}}y_{j}$<br>投影后类内离散度矩阵:$S_{Y_{i}}=\sum\limits_{y_{j} \in Y_{i}}||(y_{j}-m_{Y_{i}})||^{2}$<br>类间离散度矩阵:$S_{Y_{b}}=||m_{Y_{1}}-m_{Y_{2}}||^{2}$<br>总类内离散度矩阵:$S_{Y_{w}}=S_{Y_{1}}+S_{Y_{2}}$<br>与这类似的还有直接在$X$空间的一些量:<br>投影前类均值:$m_{X_{i}}=\frac{1}{N_{i}}\sum\limits_{x_{j} \in X_{i}}x_{j}$<br>投影前类内离散度矩阵:$S_{X_{i}}=\sum\limits_{x_{j} \in X_{i}}||(x_{j}-m_{X_{i}})||^{2}$<br>类间离散度矩阵:$S_{X_{b}}=P(\omega_{1})P(\omega_{2})||m_{X_{1}}-m_{X_{2}}||^{2}$<br>总类内离散度矩阵:$S_{X_{w}}=P(\omega_{1})S_{X_{1}}+P(\omega_{2})S_{X_{2}}$<br>于是目标函数:$J(w)=\frac{S_{Y_{b}}}{S_{Y_{w}}}=\frac{w^{T}S_{X_{b}}w}{w^{T}S_{X_{w}}w}$<br>解为:$w=S_{X_{w}}^{-1}(m_{X_{1}}-m_{X_{2}})$</li>
+</ol>
+<h1 id="隐马尔可夫模型"><a href="#隐马尔可夫模型" class="headerlink" title="隐马尔可夫模型"></a>隐马尔可夫模型</h1><h2 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h2><img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E9%9A%90%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B.png" class="">
+<p>任意时刻隐藏状态称为$\omega$,可见状态称为$v$.<br>图中$a$是概率转移矩阵里的元素,$b$是在每个状态下可见状态的概率分布.<br>隐藏状态序列为$\omega$,可见状态序列为$V$.<br>例如:<br>$\omega^{6}=${$\omega_{1},\omega_{3},\omega_{2},\omega_{2},\omega_{1},\omega_{3}$}<br>$V^{6}=${$v_{4},v_{1},v_{1},v_{4},v_{2},v_{3}$}<br>该模型需要解决的三个问题:估值问题,解码问题,学习问题.</p>
+<h2 id="估值问题"><a href="#估值问题" class="headerlink" title="估值问题"></a>估值问题</h2><p>$a,b$已知,如何求解某个特定可见序列$V$.<br>$P(V^{t})=\sum\limits_{j=1}^{c}P(V^{t},\omega_{j})$</p>
+<h3 id="前向算法"><a href="#前向算法" class="headerlink" title="前向算法"></a>前向算法</h3><img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E5%89%8D%E5%90%91%E7%AE%97%E6%B3%95.png" class="">
+<p>前向算法的思想:从$t-1$时刻的隐藏状态$\omega_{i}$转移到$t$时刻的隐藏状态$\omega_{j}$,再让$\omega_{j}$激发出可见状态$v_{i_{t}}$.<br>令$\alpha_{j}(t)=P(V^{t},\omega_{j}(t))$,那么<br>$\alpha_{j}(t)=\sum\limits_{i=1}^{c}P(V^{t-1},\omega_{i}(t-1))*P(\omega_{j}(t)|\omega_{i}(t-1))*P(v_{i_{t}}|\omega_{j})$,所以<br>$\alpha_{j}(t)=\sum\limits_{i=1}^{c}\alpha_{i}(t-1) a_{ij}b_{jk}$(假设$v_{i_{t}}=v_{k}$),初始条件为$\alpha_{j}(0)=1,j=\text{初始隐藏状态}$<br>$P(V^{t})=\sum\limits_{j=1}^{c}\alpha_{j}(t)$</p>
+<h3 id="后向算法"><a href="#后向算法" class="headerlink" title="后向算法"></a>后向算法</h3><p>后向算法只要顺着往下走,先从$t$时刻隐藏状态$\omega_{i}$转移到$t+1$时刻的隐藏状态$\omega_{j}$,此时让$\omega_{j}$激发出可见状态$v_{i_{t+1}}$,再考虑从$\omega_{j}(t+1)$出发的概率$P(v_{i_{t+1}},\cdots,v_{i_{T}},\omega_{j}(t+1))$.<br>令$\beta_{j}(t)=P(v_{i_{t+1}},\cdots,v_{i_{T}},\omega_{j}(t))=P(V^{T-t},\omega_{j}(t))$(这种写法和$\beta_{j}(t)=P(v_{i_{t+1}},\cdots,v_{i_{T}}|\omega_{j}(t))=P(V^{T-t}|\omega_{j}(t))$一样),那么<br>$\beta_{j}(t)=\sum\limits_{i=1}^{c}P(\omega_{i}(t+1)|\omega_{j}(t)) * P(v_{k}|\omega_{i}(t+1)) * P(v_{i_{t+2}},\cdots,v_{i_{T}},\omega_{i}(t+1))=\sum\limits_{i=1}^{c}a_{ji}b_{ik}P(V^{T-(t+1)},\omega_{i}(t+1))=\sum\limits_{i=1}^{c}a_{ji}b_{ik}\beta_{i}(t+1)$,初始条件为$\beta_{i}(T)=1$<br>$P(V^{t})=\sum\limits_{j=1}^{c}\beta_{j}(0)$</p>
+<h2 id="解码问题"><a href="#解码问题" class="headerlink" title="解码问题"></a>解码问题</h2><p>$a,b$和可见序列$V$已知,求解最有可能产生$V$的隐藏状态序列$\omega$.</p>
+<img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E8%A7%A3%E7%A0%81%E8%BF%87%E7%A8%8B.png" class="">
+<p>这个问题的解决方法就是维特比算法,动态规划思想,下面简单阐述一下.<br>一种朴素的想法就是遍历所有可能的路径,然后找可能性最大的.很明显,太慢.那么就删去其中那些肯定不是最大可能性的路径.<br>假设出现的可见序列为$V=${$v_{1},v_{2},v_{3}$}.<br>第一步:<br>激发出{$v_{1}$}的可能路径为{01,02,03}三种,计算出三条路径的概率$P_{01}=a_{01}b_{11},P_{02}=a_{02}b_{21},P_{03}=a_{03}b_{31}$.<br>第二步:<br>激发出{$v_{1},v_{2}$}的可能路径有九条.先考虑都达到隐藏状态1的3条:{011,021,031}.计算出三条路径的概率$P_{011}=P_{01}a_{11}b_{12},P_{021}=P_{02}a_{21}b_{22},P_{031}=P_{03}a_{31}b_{32}$,然后找出其中最大的概率,那么其余两条路径就绝对不可能是激发出{$v_{1},v_{2},v_{3}$}的路径里最大的.同理,也可以去掉其余4条路径.最终在激发出{$v_{1},v_{2}$}的路径里保留了三条.假设为{011,012,033}.<br>第三步:<br>由于前面已经确定了可能是最大路径只有三条,所以激发出{$v_{1},v_{2},v_{3}$}的路径只有九条.同样先考虑到隐藏状态1的3条:{0111,0121,0331},也是一样计算出各自的概率,然后保留一个概率最大的路径.对于其余的状态一样处理.<br>第四步:<br>持续这个过程直到结束.<br>很显然,维特比算法的时间复杂度为$O(N^{2}T)$</p>
+<h2 id="学习问题"><a href="#学习问题" class="headerlink" title="学习问题"></a>学习问题</h2><p>隐藏状态和可见状态的数目已知,然后给定大量样本(可见序列),如何求解$a,b$.<br>Baum-Welch算法(不好理解):<br>定义变量:<br>$\gamma_{ij}(t)=P(\omega_{i}(t-1),\omega_{j}(t)|V^{T})=\frac{P(\omega_{i}(t-1),\omega_{j}(t),V^{T})}{P(V^{T})}=\frac{\alpha_{i}(t-1)a_{ij}b_{jk}\beta_{j}(t)}{P(V^{T})}$.<br>更新公式为:<br>$a_{ij}=\frac{\sum\limits_{t=1}^{T}\gamma_{ij}(t)}{\sum\limits_{t=1}^{T}\sum\limits_{k}\gamma_{ik}(t)}$<br>$b_{jk}=\frac{\sum\limits_{t=1,v(t)=v_{k}}^{T}\sum\limits_{i}\gamma_{ij}(t)}{\sum\limits_{t=1}^{T}\sum\limits_{i}\gamma_{ij}(t)}$<br>先初始化$a,b$,然后进行$\gamma$的计算,再更新$a,b$,然后迭代直至收敛.(Baum-Welch算法是EM算法的一个例子,EM算法一定收敛,但是不一定是最值,可能只是个极值.而且这里计算$\gamma$的值时,和估值问题中的递归一样,感觉会很慢)<br>对公式的理解:通俗地讲就是在数数,然后估计频率.估计$a$时,分子就是从隐藏状态$\omega_{i}$进入隐藏状态$\omega_{j}$的数目,分母就是从隐藏状态$\omega_{i}$进入其他任意状态的数目,相除自然就是$a_{ij}$的估计;估计$b$时,每次进入隐藏状态$\omega_{j}$,必定会激发一个可见状态$v_{k}$,所以进入隐藏状态$\omega_{j}$的次数和在$\omega_{j}$时激发的可见状态数目是一样的,那么分子就是进入隐藏状态$\omega_{j}$且激发可见状态$v_{k}$的数目,分母就是进入隐藏状态$\omega_{j}$且激发任意可见状态的数目，相除自然就是$b_{jk}$的估计.</p>
+<h1 id="非参数估计方法"><a href="#非参数估计方法" class="headerlink" title="非参数估计方法"></a>非参数估计方法</h1><p>在参数估计方法中,需要提前知道或假设基本的分布,然后将其参数化,这样就只要去估计那些参数值,如正态分布的均值,均匀分布的界限.这样的参数估计真的一定好吗?答案是否定的.非参数则无需概率分布,直接通过抽样的方法来估计分布或者是待估计的参数.</p>
+<h2 id="Parzen窗"><a href="#Parzen窗" class="headerlink" title="Parzen窗"></a>Parzen窗</h2><p>一个向量$x$落在区域$R$的概率为$P=\int\limits_{R}p(x)dx$.如果$R$很小,那么可以认为在区域内$p(x)$是个常数,所以$P=p(x)V$,其中$V$是$R$的体积.<br>另一方面,根据大数定律,$P=\frac{k}{n}$(这个$n$是每一类的总数),其中$k$是落在区域内的样本个数,$n$是样本总数.于是,在区域$R$内,$p(x)=\frac{k}{nV}$.<br>Parzen窗方法中,先选取$V$,然后去计算有多少个样本($k$)落在这个区域内.(通俗的讲,就是:对于一个测试样本,拿这个样本以及一个包含这个样本的窗(矩形窗,高斯窗等)去每个类里进行覆盖(就是一个一个判断有没有盖中).盖中多少个训练样本,就认为$k$是多少)</p>
+<ol>
+<li>区域是矩形窗时:<img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E7%9F%A9%E5%BD%A2%E7%AA%97.jpg" class="">
+$V=h^{d}$<br>用来计算$k$的函数为:<br>$\phi(u)=<br>\begin{cases}<br>1 &amp; |u_{j} \le \frac{1}{2}|,j=1,2,\cdots,d \\<br>0 &amp; \text{otherwise}<br>\end{cases}<br>$<br>$k=\sum\limits_{i=1}^{n}\phi(\frac{x-x_{i}}{h})$</li>
+<li>区域是高斯窗时:<br>$V=\frac{1}{\sqrt{2\pi}\sigma}$<br>$\phi(\frac{x-x_{i}}{\sigma})=\exp(\frac{-(x-x_{i})^{T}(x-x_{i})}{2\sigma^{2}})$<br>$k=\sum\limits_{i=1}^{n}\phi(\frac{x-x_{i}}{h})$</li>
+</ol>
+<h3 id="PNN"><a href="#PNN" class="headerlink" title="PNN"></a>PNN</h3><p>PNN全称概率神经网络,一个PNN的图片如下:</p>
+<img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/PNN1.png" class="">
+<p>图中,Input Layer是用来输入测试样本的($d$维);Pattern Layer是直接用训练集中的样本构成的,图中是3类,第一类有2个样本,第2类有2个样本,第3类有3个样本,计算该层的输出$y$,其实就是Parzen窗的那个覆盖步骤;Summation Layer是在计算这个测试样本属于每一类的概率,也就是图中的$g$;Output Layer是决定这个测试样本到底属于哪一类,图中就是看哪个$g$最大.</p>
+<h3 id="PNN训练"><a href="#PNN训练" class="headerlink" title="PNN训练"></a>PNN训练</h3><img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/PNN2.png" class="">
+<p>PNN训练时就做两件事:</p>
+<ol>
+<li>得到Pattern Layer和Input Layer之间的连接权重$w$</li>
+<li>得到Pattern Layer所属的类</li>
+</ol>
+<p>假设从$c$类中随机抽取$n$个样本.那么<br>$w_{i}$(第$i$个样本与输入的连接权重)为$w_{ik}=\frac{x_{ik}}{(\sum\limits_{l=1}^{d}x_{il}^{2})^{\frac{1}{2}}}$<br>$a_{ij}=1$,如果第$i$个样本属于第$j$类</p>
+<h3 id="PNN分类"><a href="#PNN分类" class="headerlink" title="PNN分类"></a>PNN分类</h3><p>以高斯窗为例子:<br>先计算测试样本$x$与每一个训练样本的$g_{i}=\exp(\frac{w_{i}^{T}x-1}{\sigma^{2}})$,再计算每一类的概率(判断属于哪一类就是用$a_{ij}$)即:将每类的$g_{i}$求和,最后根据每一类的概率来判断这个测试样本最终属于哪一类.</p>
+<h2 id="K-近邻"><a href="#K-近邻" class="headerlink" title="K-近邻"></a>K-近邻</h2><p>Parzen窗是选定$V$,然后去计算$k$;K-近邻则是反过来,选定$k$,去计算$V$.<br>对于一个测试样本$x$,计算距离这个样本最近的$k$个训练样本,然后找出其中最远的那个样本,距离记为$R$,那么就可以计算出$V$(一维时$V=2R$,二维时$V=\pi R^{2}$,以此类推).<br>分类时就看最近的$k$个样本都属于哪些类,后验概率$p(\omega_{i}|x)=\frac{k_{i}}{k}$</p>
+<h3 id="计算复杂度"><a href="#计算复杂度" class="headerlink" title="计算复杂度"></a>计算复杂度</h3><p>KNN的计算复杂度很高,下面提出几种方法来减小复杂度:</p>
+<ol>
+<li>计算部分距离:$D(a,b)=(\sum\limits_{k=1}^{r}(a_{k}-b_{k}^{2}))^{\frac{1}{2}},r \le d$,即丢弃一些特征</li>
+<li>丢弃一些样本</li>
+<li>预先建立数据结构,如kd树</li>
+</ol>
+<h1 id="模糊理论基础"><a href="#模糊理论基础" class="headerlink" title="模糊理论基础"></a>模糊理论基础</h1><h2 id="为什么需要模糊理论？"><a href="#为什么需要模糊理论？" class="headerlink" title="为什么需要模糊理论？"></a>为什么需要模糊理论？</h2><p>经典集合论中,一个元素与一个集合之间的关系只有”属于”和”不属于”两种,但是实际生活中并不是非黑即白,所以需要一个概念来描述”属于的程度”.</p>
+<h2 id="模糊和概率"><a href="#模糊和概率" class="headerlink" title="模糊和概率"></a>模糊和概率</h2><h3 id="相同"><a href="#相同" class="headerlink" title="相同"></a>相同</h3><ol>
+<li>都研究不确定现象</li>
+<li>不确定性的度量都是[0,1]</li>
+</ol>
+<h3 id="不同"><a href="#不同" class="headerlink" title="不同"></a>不同</h3><p>概率论所研究的随机现象，事件本身含义明确，只是事件的发生与否存在不确定性，这种不确定性称为随机性;模糊数学所研究的模糊现象，事物的概念本身是模糊的，因此一个对象是否符合这个概念难以确定，称这种不确定性为模糊性.</p>
+<h2 id="模糊集合论"><a href="#模糊集合论" class="headerlink" title="模糊集合论"></a>模糊集合论</h2><p>经典集合论中,每个集合都有一个特征函数<br>$C_{A}(x)=<br>\begin{cases}<br>1 &amp; \text{if x} \in A \\<br>0 &amp; otherwise<br>\end{cases}<br>$<br>模糊集合论中就把这个进行发展,使每个集合都有一个隶属函数$\mu_{A}(x)$,其值域是[0,1]<br>一个模糊集$A$可以表示为$A=${$(x_{1},\mu_{1}),(x_{2},\mu_{2}),\cdots,(x_{n},\mu_{n})$},其中$x$是描述的对象,$\mu$是该对象属于集合$A$的程度.</p>
+<h2 id="模糊集运算"><a href="#模糊集运算" class="headerlink" title="模糊集运算"></a>模糊集运算</h2><p>$A=\varnothing \Leftrightarrow \forall u,\mu_{A}(u)=0$<br>$A=B \Leftrightarrow \forall u,\mu_{A}(u)=\mu_{B}(u)$<br>$A \subseteq B  \Leftrightarrow \forall u,\mu_{A}(u) \le \mu_{B}(u)$<br>$A \cup B \Leftrightarrow \forall u,\mu_{A \cup B}(u)=\max(\mu_{A}(u),\mu_{B}(u))$<br>$A \cap B \Leftrightarrow \forall u,\mu_{A \cap B}(u)=\min(\mu_{A}(u),\mu_{B}(u))$<br>$A^{C} \Leftrightarrow \forall u,\mu_{A^{C}}(u)=1-\mu_{A}(u)$<br>集合间运算的那些定律,如吸收率,分配率等等,和经典集合论一样都成立,只有一条互余律不成立,即:$A^{C} \cup A \neq U,A^{C} \cap A \neq \varnothing$</p>
+<h2 id="lambda-截集"><a href="#lambda-截集" class="headerlink" title="$\lambda$ 截集"></a>$\lambda$ 截集</h2><p>$A_{\lambda}$定义为$A_{\lambda}=${$x|A(x) \ge \lambda$},就是把隶属程度小于$\lambda$的对象舍弃,这是个经典集</p>
+<h3 id="分解定理"><a href="#分解定理" class="headerlink" title="分解定理"></a>分解定理</h3><p>定义$\lambda$与$A$的乘积$\lambda A$:<br>$\lambda A(x)=<br>\begin{cases}<br>\lambda &amp; A(x) &gt; \lambda \\<br>A(x) &amp; A(x) \le \lambda<br>\end{cases}<br>$<br>那么,<br>$A=\bigcup\limits_{\lambda \in [0,1]} \lambda A_{\lambda}$<br>分解定理表明:模糊集合$A$可以由一个经典集合族{$A_{\lambda}︱0 \le \lambda  \le 1$}来等价,一个模糊集合是无数个经典集合的并集.</p>
+<h3 id="扩张原理"><a href="#扩张原理" class="headerlink" title="扩张原理"></a>扩张原理</h3><p>问题就是:如果$A$是模糊集合,那么$f(A)$是个啥?<br>明显,$f(A)仍然应该是一个模糊集合.那么,$定义:$f(A)(x)=\max${$A(u)|f(u)=x$}.<br>如果用分解定理的形式给出,就为:$f(A)=\bigcup\limits_{\lambda \in [0,1]}\lambda f(A_{\lambda})$</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/11/%E6%9B%B4%E6%96%B0%E8%BF%87%E7%A8%8B/" rel="next" title="更新过程">
+                <i class="fa fa-chevron-left"></i> 更新过程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/14/%E8%8B%B1%E8%AF%AD%E5%90%AC%E8%AF%B4%E6%80%BB%E7%BB%93/" rel="prev" title="英语听说总结">
+                英语听说总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.jpg"
+                alt="mdrs" />
+            
+              <p class="site-author-name" itemprop="name">mdrs</p>
+              <p class="site-description motion-element" itemprop="description">坑</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#模式识别概论"><span class="nav-number">1.</span> <span class="nav-text">模式识别概论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#贝叶斯决策论"><span class="nav-number">2.</span> <span class="nav-text">贝叶斯决策论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二分类"><span class="nav-number">2.1.</span> <span class="nav-text">二分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连续的情况"><span class="nav-number">2.2.</span> <span class="nav-text">连续的情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多分类问题"><span class="nav-number">2.3.</span> <span class="nav-text">多分类问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最大似然估计和贝叶斯参数估计"><span class="nav-number">3.</span> <span class="nav-text">最大似然估计和贝叶斯参数估计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#最大似然估计"><span class="nav-number">3.1.</span> <span class="nav-text">最大似然估计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#贝叶斯参数估计"><span class="nav-number">3.2.</span> <span class="nav-text">贝叶斯参数估计</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#成分分析与判别函数"><span class="nav-number">4.</span> <span class="nav-text">成分分析与判别函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#维数问题"><span class="nav-number">4.1.</span> <span class="nav-text">维数问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PCA"><span class="nav-number">4.2.</span> <span class="nav-text">PCA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LDA"><span class="nav-number">4.3.</span> <span class="nav-text">LDA</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#隐马尔可夫模型"><span class="nav-number">5.</span> <span class="nav-text">隐马尔可夫模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#含义"><span class="nav-number">5.1.</span> <span class="nav-text">含义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#估值问题"><span class="nav-number">5.2.</span> <span class="nav-text">估值问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前向算法"><span class="nav-number">5.2.1.</span> <span class="nav-text">前向算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后向算法"><span class="nav-number">5.2.2.</span> <span class="nav-text">后向算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解码问题"><span class="nav-number">5.3.</span> <span class="nav-text">解码问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习问题"><span class="nav-number">5.4.</span> <span class="nav-text">学习问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#非参数估计方法"><span class="nav-number">6.</span> <span class="nav-text">非参数估计方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Parzen窗"><span class="nav-number">6.1.</span> <span class="nav-text">Parzen窗</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PNN"><span class="nav-number">6.1.1.</span> <span class="nav-text">PNN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PNN训练"><span class="nav-number">6.1.2.</span> <span class="nav-text">PNN训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PNN分类"><span class="nav-number">6.1.3.</span> <span class="nav-text">PNN分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#K-近邻"><span class="nav-number">6.2.</span> <span class="nav-text">K-近邻</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算复杂度"><span class="nav-number">6.2.1.</span> <span class="nav-text">计算复杂度</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模糊理论基础"><span class="nav-number">7.</span> <span class="nav-text">模糊理论基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么需要模糊理论？"><span class="nav-number">7.1.</span> <span class="nav-text">为什么需要模糊理论？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模糊和概率"><span class="nav-number">7.2.</span> <span class="nav-text">模糊和概率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相同"><span class="nav-number">7.2.1.</span> <span class="nav-text">相同</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不同"><span class="nav-number">7.2.2.</span> <span class="nav-text">不同</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模糊集合论"><span class="nav-number">7.3.</span> <span class="nav-text">模糊集合论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模糊集运算"><span class="nav-number">7.4.</span> <span class="nav-text">模糊集运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lambda-截集"><span class="nav-number">7.5.</span> <span class="nav-text">$\lambda$ 截集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分解定理"><span class="nav-number">7.5.1.</span> <span class="nav-text">分解定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩张原理"><span class="nav-number">7.5.2.</span> <span class="nav-text">扩张原理</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mdrs</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('3');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
+<script type="text/javascript" src="/js/src/title_cheat.js"></script>

@@ -4,31 +4,12 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2020/08/26/hello-world/"/>
-      <url>/2020/08/26/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>混沌幻想2</title>
       <link href="/2020/04/19/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32/"/>
       <url>/2020/04/19/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32/</url>
       
         <content type="html"><![CDATA[<h1 id="真结局"><a href="#真结局" class="headerlink" title="真结局"></a>真结局</h1><img src="/2020/04/19/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32.png" class=""><h1 id="反伤回血流"><a href="#反伤回血流" class="headerlink" title="反伤回血流"></a>反伤回血流</h1><p>注意点:</p><ol><li>1区要多升级充能技能</li><li>2区有暴杀怪,要把攻击加到76</li><li>4区到远古电子时要把噬心之火加到2级,之后就随便打了<img src="/2020/04/19/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32/%E5%8A%A0%E7%82%B91.png" class=""><img src="/2020/04/19/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32/%E5%8A%A0%E7%82%B92.png" class=""><img src="/2020/04/19/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32/%E5%8A%A0%E7%82%B93.png" class=""><img src="/2020/04/19/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32/%E5%8A%A0%E7%82%B94.png" class="">可惜这次没能把真空把和先之先点满.<br>爆攻流不知道怎么打,都活不到3区.</li></ol>]]></content>
       
-      
-      <categories>
-          
-          <category> 魔塔 </category>
-          
-      </categories>
       
       
     </entry>
@@ -43,12 +24,6 @@
         <content type="html"><![CDATA[<h1 id="替代数据法"><a href="#替代数据法" class="headerlink" title="替代数据法"></a>替代数据法</h1><h2 id="出处及含义"><a href="#出处及含义" class="headerlink" title="出处及含义"></a>出处及含义</h2><p>Surrogate data—替代数据法,最早出自James Theiler的这篇文章<Testing For Nonlinearity In Time Series: The Method Of Surrogate Data>.这个替代数据法一开始的目的就是检验原数据是不是有非线性.和其他假设检验一样,要想检验数据是否具有非线性,具体步骤也是先作一个原假设,然后在这个原假设的前提下导出一个统计量的概率分布,然后计算置信度和置信区间.这种解析推导的方法在工程上通常不可行.替代数据法的根本思想就是通过蒙特卡罗的方法,来生成一个经验分布作为统计量的真实分布.好处是不用推导,坏处是费时间.下面举一个例子来说明替代数据法怎么用,出自James Theiler的原文.<br>假设$Q_{D}$是根据原始数据计算出的统计量的值,$Q_{H_{i}}$是每次生成替代数据后计算出的统计量的值(蒙特卡罗次数通常很多).在蒙特卡罗跑完后,计算这些$Q_{H}$的均值$\mu_{H}$和标准差$\sigma_{H}$.最后计算一个用于判断是否具有显著意义的&#39;Significance&#39;—$S=\frac{|Q_{D}-\mu_{H}|}{\sigma_{H}}$.这个意义也很明显:如果蒙特卡罗生成的是经验分布,那么$\mu_{H}$和$\sigma_{H}$就可以认为是真实分布的均值和标准差,这个S也就可以看作原始数据计算出的统计量偏离均值多少个标准差,这一点和讲解假设检验时用正态分布作的例子是一样的.具体怎么判断是否显著意义呢?比如咱们认为偏离3个标准差就能拒绝原假设,那么如果计算出的S$\ge$3,那么就具有显著意义.原文中选用的统计量是一些非线性的衡量,如:Correlation Dimension,$\nu$;Lyapunov exponent,$\lambda$;Forecasting error,$\epsilon$.</p><h2 id="生成替代数据"><a href="#生成替代数据" class="headerlink" title="生成替代数据"></a>生成替代数据</h2><p>生成替代数据时需要保留原数据的一些特点,比如均值,标准差.在此提供两个James Theiler的原文中生成替代数据的算法.</p><h3 id="I"><a href="#I" class="headerlink" title="I"></a>I</h3><p>该做法保留了原始数据的幅度谱,改变了相位谱.做法就是先将原始数据作傅里叶变换,然后把相位按照[0,2$\pi$]的均匀分布随机生成,最后再作逆傅里叶变换.在逆傅里叶变换前,需要将相位对称:<br>$\Re{z^{&#39;}(n)=\Re{(z(n)+z(M-1-n))/2}}$<br>$\Im{z^{&#39;}(n)=\Im{(z(n)-z(M-1-n))/2}}$<br>这是为了保证变换后的数据一定是实的.</p><h3 id="II"><a href="#II" class="headerlink" title="II"></a>II</h3><p>算法II的原假设为:真实数据是线性随机过程,而观察到的数据是真实数据的非线性变换.</p><ol><li>设原始数据为$x(n)$</li><li>将$x(n)$排序为$Sx(n)$,并记录下每个$x(i)$对应的位置$Rx(i)$<br>举个例子: $x(n)$=5,3,2,6,7,1<br>那么$Sx(n)$=1,2,3,5,6,7<br>$Rx(n)$=4,3,2,5,6,1</li><li>生成一个随机的高斯分布$g(n)$</li><li>将$g(n)$排序得到$Sg(n)$</li><li>定义一个新的时间序列$y(n)$=$Sg(Rx(n))$,这个$y(n)$可以认为是改变了原来每个$x(n)$的幅度</li><li>用I生成$y^{&#39;}(n)$</li><li>将$y^{&#39;}(n)$排序并记录$Ry^{&#39;}(n)$</li><li>得到替代数据$x^{&#39;}(n)=Sx(Ry^{&#39;}(n))$</li></ol><p>下面是其他一些生成替代数据的方法</p><h3 id="III"><a href="#III" class="headerlink" title="III"></a>III</h3><p>IID1:直接将原始数据随机重排,各个通道的重排顺序是不一样的.该方法的原假设为:各个通道是独立的.<br>IID2:直接将原始数据随机重排,但是各个通道的重排顺序是一样的.该方法的原假设为:各个通道在某种意义下是同步的.<br>FT2:针对两通道数据.将原始数据作傅里叶变换后,生成随机相位时要保持各个频率上的相位差相同.该方法可用于检测两通道是否相位同步.</p><h1 id="替代数据法与DTF"><a href="#替代数据法与DTF" class="headerlink" title="替代数据法与DTF"></a>替代数据法与DTF</h1><p>本人对于检测非线性在这种替代数据法下的含义:DTF是从MVAR模型估计出来的,它本来应该表达出原始数据各通道间的线性因果关系.但由于计算DTF的非线性,有可能会造成一些原本没有因果(线性的)的通道,却因为非线性计算的过程而得到了因果.这种检测方法就是要去除掉这些因果.具体做法如下:</p><ol><li>将原始数据随机重排,各个通道的重排顺序是不一样的.</li><li>计算出重排后的DTF.</li><li>将1和2重复100次.</li><li>下图是重复100次后通道2向1的DTF在各个频率上的值.<img src="/2020/04/07/surrogate-data/%E7%BB%8F%E9%AA%8C%E5%88%86%E5%B8%83.png" class="">这个就是经验分布.</li><li>由于各个频率的DTF是独立的,于是计算的阈值与频率无关,所以可以将所有频率的值加起来.<img src="/2020/04/07/surrogate-data/%E9%98%88%E5%80%BC%E8%AE%A1%E7%AE%97.png" class="">根据P值来计算阈值:按P值的多少来保留多少数据.假如P值是0.05,那么就找一个阈值,使得大于阈值的数据占总的5%.实际操作时得对P值作多重校正.</li><li>拿5中计算得到的阈值来判断通道1向2是否有因果(对称检验)<img src="/2020/04/07/surrogate-data/%E5%88%A4%E6%96%AD%E6%98%BE%E8%91%97.png" class="">图中所有频率上的DTF值都是小于阈值的,就认为1向2是没有因果的,应该把1向2的DTF值都置0.实际操作时可能发生其他情况,像某些频率上的值低于阈值,某些又高于阈值.具体如何判断是否有因果是人为决定的,比如:把1向2低于阈值的那些频率上的DTF都置0,高于阈值的都不动;或者,如果所有频率上有75%的值低于阈值,那么就认为1向2没有因果,把1向2所有DTF都置0,反之都不动.</li></ol>]]></content>
       
       
-      <categories>
-          
-          <category> 信号处理 </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -61,12 +36,6 @@
       
         <content type="html"><![CDATA[<p>在网上看到了一张能很好说明共产主义者看待社会上所谓的低级职业的图,这和&lt;共产党宣言&gt;里所说的很吻合–无产阶级只有解放全人类,才能最终解放自己.</p><img src="/2020/04/06/%E5%85%B1%E4%BA%A7%E4%B8%BB%E4%B9%89%E8%80%85%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E6%89%80%E8%B0%93%E4%BD%8E%E7%BA%A7%E8%81%8C%E4%B8%9A/%E4%B8%89%E7%A7%8D%E6%80%81%E5%BA%A6.jpg" class="">]]></content>
       
-      
-      <categories>
-          
-          <category> 杂 </category>
-          
-      </categories>
       
       
     </entry>
@@ -81,12 +50,6 @@
         <content type="html"><![CDATA[<h1 id="结果罗列"><a href="#结果罗列" class="headerlink" title="结果罗列"></a>结果罗列</h1><p>一点一点的列举结果,方便可以再次回顾以及寻找事物之间的联系</p><h1 id="问题导向"><a href="#问题导向" class="headerlink" title="问题导向"></a>问题导向</h1><p>这可以从各种论坛,贴吧,知乎中寻找大家都关注的问题,或者自己从书中提出问题,然后回答.</p><h1 id="事物发展顺序"><a href="#事物发展顺序" class="headerlink" title="事物发展顺序"></a>事物发展顺序</h1><p>经典的如:以时间来列举事件,这些事件可以总的用来说明一件事情或是得出一个结论.</p><h1 id="直接转载"><a href="#直接转载" class="headerlink" title="直接转载"></a>直接转载</h1><p>网上很多Blog都是这样,经常见的就像csdn,转载时不看内容,甚至把错的东西也一起转载了.</p>]]></content>
       
       
-      <categories>
-          
-          <category> 杂 </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -99,12 +62,6 @@
       
         <content type="html"><![CDATA[<h1 id="3绿结局-我太弱了"><a href="#3绿结局-我太弱了" class="headerlink" title="3绿结局,我太弱了"></a>3绿结局,我太弱了</h1><img src="/2020/03/26/%E6%98%86%E4%BB%91%E9%95%9C/%E6%98%86%E4%BB%913%E7%BB%BF.png" class=""><h1 id="6绿结局"><a href="#6绿结局" class="headerlink" title="6绿结局"></a>6绿结局</h1><img src="/2020/03/26/%E6%98%86%E4%BB%91%E9%95%9C/%E6%98%86%E4%BB%916%E7%BB%BF.png" class="">]]></content>
       
-      
-      <categories>
-          
-          <category> 魔塔 </category>
-          
-      </categories>
       
       
     </entry>
@@ -119,12 +76,6 @@
         <content type="html"><![CDATA[<h1 id="线性最小二乘"><a href="#线性最小二乘" class="headerlink" title="线性最小二乘"></a>线性最小二乘</h1><h2 id="直接求解"><a href="#直接求解" class="headerlink" title="直接求解"></a>直接求解</h2><p>目标函数为$||Ax-b||^{2}$<br>令$h(x)=||Ax-b||^{2}$,展开得$h(x)=(Ax-b)^{T}(Ax-b)=(Ax)^{T}(Ax)-(Ax)^{T}b-b^{T}Ax+b^{T}b$<br>求导得$\frac{\partial h(x)}{\partial x}=A^{T}Ax-A^{T}b$<br>令导数为0,得到解$x=(A^{T}A)^{-1}A^{T}b$</p><h2 id="QR分解"><a href="#QR分解" class="headerlink" title="QR分解"></a>QR分解</h2><p>直接方法速度太慢，将A进行QR分解,其中Q为正交矩阵,R为上三角矩阵.<br>所以$x=((QR)^{T}(QR))^{-1}(QR)^{T}b=R^{-1}Q^{T}b$</p>]]></content>
       
       
-      <categories>
-          
-          <category> 信号处理 </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -137,12 +88,6 @@
       
         <content type="html"><![CDATA[<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><p>目标就是求解如下方程:<br>$R * a=-r$<br>其中$R=<br>\left(<br>    \begin{matrix}<br>    R(0) &amp; R(1) &amp; \cdots &amp; R(N-1) \\<br>    R(1) &amp; R(0) &amp; \cdots &amp; R(N-2) \\<br>    \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\<br>    R(N-1) &amp; R(N-2) &amp; \cdots &amp; R(0)<br>    \end{matrix}<br>\right)<br>$,$a=<br>\left(<br>    \begin{matrix}<br>    a(1) \\<br>    a(2) \\<br>    \vdots \\<br>    a(N)<br>    \end{matrix}<br>\right)<br>$,$r=<br>\left(<br>    \begin{matrix}<br>    R(1) \\<br>    R(2) \\<br>    \vdots \\<br>    R(N)<br>    \end{matrix}<br>\right)<br>$</p><h1 id="具体算法"><a href="#具体算法" class="headerlink" title="具体算法"></a>具体算法</h1><p>Levinson算法是个递归算法,先拿低阶举例说明一下,然后解释一般递归过程.</p><h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>当$N=1$时,先计算出$a(1)$:$R(0) * a_{1}(1)=-R(1)$,所以$a_{1}(1)=-\frac{R(1)}{R(0)}$<br>当$N=2$时,有:<br>$R(0) * a_{2}(1)+R(1) * a_{2}(2)=-R(1)$<br>$R(1) * a_{2}(1)+R(0) * a_{2}(2)=-R(2)$<br>将$R(1)=-a_{1}(1)*R(0)$代进去.得到<br>$a_{2}(2)=-\frac{R(2)+R(1)a_{1}(1)}{R(0)[1-a_{1}^{2}(1)]}$<br>$a_{2}(1)=a_{1}(1)+a_{2}(2) * a_{1}(1)$<br>至此,用低阶的系数$a_{1}(1)$,表达出了高阶系数$a_{2}(1),a_{2}(2)$</p><h2 id="推广"><a href="#推广" class="headerlink" title="推广"></a>推广</h2><p>设$a_{N}=<br>\left(<br>    \begin{matrix}<br>    a_{N}(1) \\<br>    a_{N}(2) \\<br>    \vdots \\<br>    a_{N}(N)<br>    \end{matrix}<br>\right)=<br>\left(<br>    \begin{matrix}<br>    a_{N-1} \\<br>    0<br>    \end{matrix}<br>\right)+<br>\left(<br>    \begin{matrix}<br>    d_{N-1} \\<br>    \lambda_{N}<br>    \end{matrix}<br>\right)<br>$<br>令$R_{N}=<br>\left(<br>    \begin{matrix}<br>    R_{N-1} &amp; r_{N-1}^{b} \\<br>    r_{N-1}^{bT} &amp; R(0)<br>    \end{matrix}<br>\right)<br>$,其中b是把向量里的顺序反转.<br>于是有:$<br>\left(<br>    \begin{matrix}<br>    R_{N-1} &amp; r_{N-1}^{b} \\<br>    r_{N-1}^{bT} &amp; R(0)<br>    \end{matrix}<br>\right)<br>\left(<br>    \left(<br>        \begin{matrix}<br>        a_{N-1} \\<br>        0<br>        \end{matrix}<br>    \right)+<br>    \left(<br>        \begin{matrix}<br>        d_{N-1} \\<br>        \lambda_{N}<br>        \end{matrix}<br>    \right)<br>\right)=<br>-\left(<br>    \begin{matrix}<br>    r_{N-1} \\<br>    R(N)<br>    \end{matrix}<br>\right)<br>$<br>即为:<br>\begin{equation}<br>\label{eq:1}<br>R_{N-1}a_{N-1}+R_{N-1}d_{N-1}+\lambda_{N}r_{N-1}^{b}=-r_{N-1} \tag{1}<br>\end{equation}<br>\begin{equation}<br>\label{eq:2}<br>r_{N-1}^{bT}a_{N-1}+r_{N-1}^{bT}d_{N-1}+\lambda_{N}R(0)=-R(N) \tag{2}<br>\end{equation}<br>注意到$R_{N-1}a_{N-1}=-r_{N-1}$,于是在公式\eqref{eq:1}中,可以解得$d_{N-1}=-\lambda_{N}R_{N-1}^{-1}r_{N-1}^{b}=\lambda_{N}a_{N-1}^{b}$<br>代入公式\eqref{eq:2}并注意到$r_{N-1}^{bT}a_{N-1}^{bT}=r_{N-1}^{T}a_{N-1}$,可解得$\lambda_{N}=-\frac{R(N)+r_{N-1}^{bT}a_{N-1}}{R(0)+r_{N-1}^{T}a_{N-1}}$<br>$d_{N-1}$和$\lambda_{N}$都有了,所以<br>$a_{N}(k)=a_{N-1}(k)+d_{N-1}(k),k=1,2,\cdots,N-1$<br>$a_{N}(N)=\lambda_{N}$</p><h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><p>计算(MV)AR模型的系数,此时$R$就是信号的自相关</p>]]></content>
       
-      
-      <categories>
-          
-          <category> 信号处理 </category>
-          
-      </categories>
       
       
     </entry>
@@ -157,12 +102,6 @@
         <content type="html"><![CDATA[<p>三种结局,作者参考了魔女之家的结局.<br>BE:先打顶楼,再打河边.由于顶楼有很多补给,所以这个结局最容易打.</p><img src="/2020/03/24/%E6%8B%AF%E6%95%91%E7%AC%AC%E4%BA%8C%E7%9A%87%E5%A5%B3/be.png" class=""><p>NE:先打河边,再打顶楼,最后打地下,补给只对地下BOSS有用,相对简单.</p><img src="/2020/03/24/%E6%8B%AF%E6%95%91%E7%AC%AC%E4%BA%8C%E7%9A%87%E5%A5%B3/ne.png" class=""><p>HE:先打河边,然后直接打地下,顶楼不用打.由于没有顶楼的补给,而且还得省下3把蓝,难度比较大,得多计算和尝试.</p><img src="/2020/03/24/%E6%8B%AF%E6%95%91%E7%AC%AC%E4%BA%8C%E7%9A%87%E5%A5%B3/he.png" class="">]]></content>
       
       
-      <categories>
-          
-          <category> 魔塔 </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -175,12 +114,6 @@
       
         <content type="html"><![CDATA[<p>通关了Black Mesa, Xen星和原作差别挺大的.Xen星的外围做的很漂亮,但是内部外星工厂那里还是比较一般.而且Xen星解密部分多了很多,战斗流程也长了(特别是头蟹之母).<br>附:打爆尼赫伦斯的狗头</p><img src="/2020/03/16/Black-Mesa/%E5%B0%BC%E8%B5%AB%E4%BC%A6%E6%96%AF.jpg" class="" title="尼赫伦斯">]]></content>
       
-      
-      <categories>
-          
-          <category> 杂 </category>
-          
-      </categories>
       
       
     </entry>
@@ -195,12 +128,6 @@
         <content type="html"><![CDATA[<h1 id="总体框架"><a href="#总体框架" class="headerlink" title="总体框架"></a>总体框架</h1><img src="/2020/03/14/%E8%8B%B1%E8%AF%AD%E5%90%AC%E8%AF%B4%E6%80%BB%E7%BB%93/structure.png" class="" title="总体的框架"><h1 id="Opening-and-Overview"><a href="#Opening-and-Overview" class="headerlink" title="Opening and Overview"></a>Opening and Overview</h1><p>大概介绍一下自己以及这次presentation要讲啥哪些内容,要分几部分.<br>介绍总的内容时:</p><ol><li>In my presentation today, I&#39;m going to look at…</li><li>In this presentation, I&#39;ll be describing…</li></ol><p>介绍分几部分内容时:</p><ol><li>I&#39;ll start by looking at…</li><li>Next, I&#39;ll focus on…</li><li>And to finish off, I&#39;ll consider…</li></ol><h1 id="Lead-in"><a href="#Lead-in" class="headerlink" title="Lead in"></a>Lead in</h1><ol><li>So, for starters then, let&#39;s look at…</li><li>Right, to begin with, let&#39;s look at…</li><li>Ok, let&#39;s start by looking at…</li></ol><h1 id="Linking"><a href="#Linking" class="headerlink" title="Linking"></a>Linking</h1><ol><li>Now, I&#39;d like to move on to the next part of my presentation, which is …</li><li>Next, I&#39;d like to look at my second point today: …</li><li>This leads us to my next point: …</li><li>This brings us to the final part of my presentation today: …</li><li>Let&#39;s invite my partner to …</li></ol><h1 id="Ending"><a href="#Ending" class="headerlink" title="Ending"></a>Ending</h1><ol><li>That concludes my presentation. Are there any questions?</li><li>That brings us to the end of my presentation today. Thank you very much for listening. Does anyone have any questions?</li><li>Right then, as I hope to have shown this morning, it&#39;s clear that … . Now, does anyone have any questions?</li><li>I hope you&#39;ve enjoyed my presentation today. If anyone has any questions, I&#39;ll do my best to answer them.</li></ol><h1 id="Questions-Styles-some-examples"><a href="#Questions-Styles-some-examples" class="headerlink" title="Questions Styles(some examples)"></a>Questions Styles(some examples)</h1><h2 id="39-Straight-39-Questions"><a href="#39-Straight-39-Questions" class="headerlink" title="&#39;Straight&#39; Questions"></a>&#39;Straight&#39; Questions</h2><ol><li>Why is the monster unlikely to be a piesiosaur?</li><li>I have a question. Why is the monster unlikely to be  a plesiosaur?</li><li>You mentioned that the monster is unlikely to be a plesiosaur. Why do you think that is?</li></ol><h2 id="39-Give-me-more-39-Questions"><a href="#39-Give-me-more-39-Questions" class="headerlink" title="&#39;Give me more&#39; Questions"></a>&#39;Give me more&#39; Questions</h2><ol><li>Can you go into more detail about that?</li><li>Can you say a little more about that?</li><li>Can you give us some examples of that?</li></ol><h2 id="39-I-didn-39-t-understand-so-tell-me-again-39-Questions"><a href="#39-I-didn-39-t-understand-so-tell-me-again-39-Questions" class="headerlink" title="&#39;I didn&#39;t understand, so tell me again&#39; Questions"></a>&#39;I didn&#39;t understand, so tell me again&#39; Questions</h2><ol><li>Can you explain about that again?</li><li>Can you go over that part again?</li><li>Can you run through that again?</li></ol><h1 id="Answers"><a href="#Answers" class="headerlink" title="Answers"></a>Answers</h1><h2 id="重要的一点-不懂的就是不懂-不要强行回答"><a href="#重要的一点-不懂的就是不懂-不要强行回答" class="headerlink" title="重要的一点:不懂的就是不懂,不要强行回答"></a>重要的一点:不懂的就是不懂,不要强行回答</h2><ol><li>Sorry, I&#39;m afraid I don&#39;t know the answer to that.</li><li>Sorry, I&#39;m afraid you&#39;ve got me there; I simply don&#39;t know. I can try to find out for you though. See me after the presentation and we can sort something out.</li><li>Sorry, I have to be honest with you and say that I don&#39;t know.</li></ol><h2 id="To-Good-Questions"><a href="#To-Good-Questions" class="headerlink" title="To Good Questions"></a>To Good Questions</h2><ol><li>Good point.</li><li>I&#39;m glad you asked that.</li><li>That&#39;s a very good question.</li></ol><h2 id="To-Difficult-Questions"><a href="#To-Difficult-Questions" class="headerlink" title="To Difficult Questions"></a>To Difficult Questions</h2><ol><li>I don&#39;t know that off the top of my head.</li><li>Can I get back to you on that?</li><li>Interesting. What do you think?</li><li>I wish I knew.</li><li>I&#39;m afraid I don&#39;t have that information with me.</li></ol><h2 id="To-Unnecessary-Questions"><a href="#To-Unnecessary-Questions" class="headerlink" title="To Unnecessary Questions"></a>To Unnecessary Questions</h2><ol><li>I think I answered that earlier.</li><li>Well, as I said…I&#39;m afraid I&#39;m not in a position to comment on that.</li><li>Well, as I mentioned earlier…</li></ol><h2 id="To-Irrelavant-Questions"><a href="#To-Irrelavant-Questions" class="headerlink" title="To Irrelavant Questions"></a>To Irrelavant Questions</h2><ol><li>I&#39;m afraid I don&#39;t see the connection.</li><li>Sorry, I don&#39;t follow you.</li><li>To be honest, I think that raises a different issue.</li></ol><h1 id="Closing-Phrases"><a href="#Closing-Phrases" class="headerlink" title="Closing Phrases"></a>Closing Phrases</h1><ol><li>Does anyone have any questions?(no questions) In that case, I&#39;ll finish my presentation here. Thank you for listening.</li><li>If there are no more questions, I&#39;ll stop here, Thank you very much for your attention.</li></ol><h1 id="Visual-Aids"><a href="#Visual-Aids" class="headerlink" title="Visual Aids"></a>Visual Aids</h1><ol><li>Noun-phrase</li><li>remove verbs</li><li>remove articles: the, a</li><li>using a single word</li><li>explaination word,e.g. why, how</li></ol><h1 id="How-to-deal-with-visual-aids"><a href="#How-to-deal-with-visual-aids" class="headerlink" title="How to deal with visual aids"></a>How to deal with visual aids</h1><h2 id="Preparing-the-audience-for-a-visual-aid"><a href="#Preparing-the-audience-for-a-visual-aid" class="headerlink" title="Preparing the audience for a visual aid"></a>Preparing the audience for a visual aid</h2><ol><li>So now let&#39;s look at…</li><li>Now, I&#39;d like to show you…</li></ol><h2 id="Explaining-the-purpose-of-a-visual-word"><a href="#Explaining-the-purpose-of-a-visual-word" class="headerlink" title="Explaining the purpose of a visual word"></a>Explaining the purpose of a visual word</h2><ol><li>This graph/table/diagram shows…</li><li>This graph/table/diagram provides an overview of …</li></ol><h2 id="Drawing-attention-to-key-features"><a href="#Drawing-attention-to-key-features" class="headerlink" title="Drawing attention to key features"></a>Drawing attention to key features</h2><ol><li>I would like to draw your attention to …</li><li>As you can see, the column on the left shows …</li><li>The columns on the right show …</li><li>The points in bold represent …</li><li>As this data indicates, … </li></ol><h1 id="Note-Making"><a href="#Note-Making" class="headerlink" title="Note Making"></a>Note Making</h1><h2 id="Cornell-Method"><a href="#Cornell-Method" class="headerlink" title="Cornell Method"></a>Cornell Method</h2><img src="/2020/03/14/%E8%8B%B1%E8%AF%AD%E5%90%AC%E8%AF%B4%E6%80%BB%E7%BB%93/Cornell.png" class=""><h2 id="Outline-Method"><a href="#Outline-Method" class="headerlink" title="Outline Method"></a>Outline Method</h2><img src="/2020/03/14/%E8%8B%B1%E8%AF%AD%E5%90%AC%E8%AF%B4%E6%80%BB%E7%BB%93/Outline.png" class=""><h2 id="Charting-Method"><a href="#Charting-Method" class="headerlink" title="Charting Method"></a>Charting Method</h2><img src="/2020/03/14/%E8%8B%B1%E8%AF%AD%E5%90%AC%E8%AF%B4%E6%80%BB%E7%BB%93/Charting.png" class=""><h2 id="Sentence-Method"><a href="#Sentence-Method" class="headerlink" title="Sentence Method"></a>Sentence Method</h2><img src="/2020/03/14/%E8%8B%B1%E8%AF%AD%E5%90%AC%E8%AF%B4%E6%80%BB%E7%BB%93/Sentence.png" class=""><h2 id="Mind-mapping-Method"><a href="#Mind-mapping-Method" class="headerlink" title="Mind-mapping Method"></a>Mind-mapping Method</h2><img src="/2020/03/14/%E8%8B%B1%E8%AF%AD%E5%90%AC%E8%AF%B4%E6%80%BB%E7%BB%93/Mind-mapping.png" class="">]]></content>
       
       
-      <categories>
-          
-          <category> 杂 </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -213,12 +140,6 @@
       
         <content type="html"><![CDATA[<h1 id="模式识别概论"><a href="#模式识别概论" class="headerlink" title="模式识别概论"></a>模式识别概论</h1><ol><li>模式识别就是分类,这件事人类已经持续做了数十万年,终于造就了世界上最复杂,高级的分类器—大脑.现在,随着计算机技术的发展,人类希望通过计算机来加强自身分类的技术和正确率,同时也希望计算机获得真正的智能,以此来加强对世界的认识.</li><li>模式识别最重要的就是得到能够从本质上把事物分类的特征,第二重要的就是分类的速度和正确率.人脑的非线性远优于计算机,但是线性计算能力则比计算机差很多.随着计算机算力的提高,过去一些无法使用的算法,现在已经可以使用了.</li><li>模式识别的一般流程如下图. 其实预处理和特征提取没啥区别,只是预处理中处理的那些噪声很明显以至于不需要专门对其进行分类而已.<img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB%E4%B8%80%E8%88%AC%E6%B5%81%E7%A8%8B.png" class=""></li></ol><h1 id="贝叶斯决策论"><a href="#贝叶斯决策论" class="headerlink" title="贝叶斯决策论"></a>贝叶斯决策论</h1><p>一句话就是:在已知特征$x$的值时(这个值是测量到的,不是先验知识),样本分到哪一类的概率最大,那就把样本分到那一类.</p><h2 id="二分类"><a href="#二分类" class="headerlink" title="二分类"></a>二分类</h2><p>假设类为$\omega_{1}$和$\omega_{2}$.由贝叶斯公式得:$P(\omega_{i}|x)=\frac{P(x|\omega_{i})P(\omega_{i})}{P(x)}$.分母上的$P(x)$对于所有类都是一样的(特征的概率分布),所以实际计算就是计算$P(x|\omega_{i})P(\omega_{i})$,然后比较大小.对于公式的理解:从特征值中得到更多的信息,然后对先验知识进行修正($P(\omega_{i}|x)$).</p><h2 id="连续的情况"><a href="#连续的情况" class="headerlink" title="连续的情况"></a>连续的情况</h2><ol><li>总的来说就是将某个目标函数(不知道为什么很多教材喜欢叫损失函数,明明实际情况又不是总是关注损失)最值化,教材中是将损失函数最小化.</li><li>已知特征$x$的值时采取行为$\alpha_{i}$的损失为:$R(\alpha_{i}|x)=\sum\limits_{j=1}^{k}\lambda(\alpha_{i}|\omega_{j})P(\omega_{j}|x)$,式中$\lambda$可以理解为:知道样本在$\omega_{j}$类后采取行为$\alpha_{i}$的风险.</li><li>想让总损失最小,那就只要让采取每一个行为的损失$R(\alpha_{i}|x)$最小就行.</li><li>可以把$\alpha_{i}$当做把样本分到$\omega_{i}$类</li><li>一种最简单的风险函数$\lambda(\alpha_{i}|\omega_{j}):<br>\begin{cases}<br>0,i=j \\<br>1,i \neq j<br>\end{cases}<br>$<br>这意味着所有误判都是等价的.此时的损失函数$R(\alpha_{i}|x)=1-P(\omega_{i}|x)$,所以判别准则就是:哪个类后验概率最大就分到那一类</li><li>极小极大化原则:设计一个分类器,对于所有可能的先验分布,损失函数的最大值(最坏情况)最小.方法:让损失函数$R$与先验分布$P(\omega_{i})$无关.<br>对于二分类问题可得到:<br>$R=\lambda_{2,2}+(\lambda_{1,1}-\lambda_{2,2})\int\limits_{R_{1}}p(x|\omega_{1})dx+P(\omega_{1})[(\lambda_{1,1}-\lambda_{2,2})+(\lambda_{2,1}-\lambda_{1,1})\int\limits_{R_{2}}p(x|\omega_{1})dx-(\lambda_{1,2}-\lambda_{2,2})\int\limits_{R_{1}}p(x|\omega_{2})dx]$.于是,让中括号里的=0就Ok.</li></ol><h2 id="多分类问题"><a href="#多分类问题" class="headerlink" title="多分类问题"></a>多分类问题</h2><ol><li>对于$k$个分类器$g_{i}(x),i=1,2…k$,仍然是哪个最大就把$x$分到那一类</li><li>对于$g_{i}(x)$是多元正态分布的情况,讨论协方差$\sum$的三种情况:<br>(i)$\sum_{i}=\sigma I^{2}$,即:每个分类器的各变量之间独立.此时$g_{i}(x)=-\frac{||x-\mu_{i}||^{2}}{2\sigma^{2}}+lnP(\omega_{i})$<br>(ii)$\sum_{i}=\sum$,每个分类器的协方差矩阵都一样(各个分类器离散程度或者说是稳定性相同).此时$g_{i}(x)=-\frac{1}{2}(x-\mu_{i})^{T}\sum^{-1}(x-\mu_{i})+lnP(\omega_{i})$<br>(iii)$\sum_{i}$任意,$g_{i}(x)=x^{T}W_{i}x+w_{i}^{T}x+w_{i_{0}}$,其中<br>$W_{i}=-\frac{1}{2}\sum_{i}^{-1}$<br>$w_{i}=\sum_{i}^{-1}\mu_{i}$<br>$w_{i_{0}}=-\frac{1}{2}\mu_{i}^{T}\sum_{i}^{-1}\mu_{i}-\frac{1}{2}ln|\sum_{i}|+lnP(\omega_{i})$</li></ol><h1 id="最大似然估计和贝叶斯参数估计"><a href="#最大似然估计和贝叶斯参数估计" class="headerlink" title="最大似然估计和贝叶斯参数估计"></a>最大似然估计和贝叶斯参数估计</h1><p>最大似然估计认为参数是个确定的值,贝叶斯参数估计认为参数有自身的概率分布.这和频率学派与贝叶斯学派争论的问题一样,是人们看待世界的角度不同,没有对错之分.</p><h2 id="最大似然估计"><a href="#最大似然估计" class="headerlink" title="最大似然估计"></a>最大似然估计</h2><ol><li>前提:每一类的样本是独立同分布的</li><li>原理:找一个参数值使样本的联合概率分布最大化,即找$\theta$值,使得$\prod\limits_{k=1}^{n}P(x_{k}|\theta)$最大</li></ol><h2 id="贝叶斯参数估计"><a href="#贝叶斯参数估计" class="headerlink" title="贝叶斯参数估计"></a>贝叶斯参数估计</h2><ol><li>假设样本集为$D$.目标为:求得$p(x|D)$,使得$p(x|D)$接近$p(x)$</li><li>核心公式为:$p(x|D)=\int p(x|\mu)p(\mu|D)d\mu$</li><li>估计$p(\mu|D)$时, $p(x|\mu)$的形式已知,只是参数未知,先验分布$p(\mu)$已知.于是,利用贝叶斯公式得$p(\mu|D)=\frac{p(D|\mu)p(\mu)}{\int p(D|\mu)p(\mu)d\mu}$.其中$p(D|\mu)=\prod p(x_{k}|\mu)$</li></ol><h1 id="成分分析与判别函数"><a href="#成分分析与判别函数" class="headerlink" title="成分分析与判别函数"></a>成分分析与判别函数</h1><h2 id="维数问题"><a href="#维数问题" class="headerlink" title="维数问题"></a>维数问题</h2><ol><li>维数太多或者样本太多会导致计算太慢</li><li>解决方法:降维<br>(i)选取所有特征中的一个子集<br>(ii)将几个特征组合到一起</li></ol><h2 id="PCA"><a href="#PCA" class="headerlink" title="PCA"></a>PCA</h2><p>将特征空间组成的矩阵进行特征值分解,然后按特征值大小排列找出对应的特征向量，这些新的特征向量之间是不相关的,方差是依次递减的.选取前k个特征值对应的特征向量作为新的特征,就完成了降维,必然会丢失一点原始样本的信息.实际应用时一般没法特征值分解而采用SVD分解.</p><h2 id="LDA"><a href="#LDA" class="headerlink" title="LDA"></a>LDA</h2><ol><li>PCA和LDA的区别如下图,PCA是找一条通过样本均值的直线进行投影,LDA是找一条任意直线进行投影.目标函数也不一样,PCA是最小化样本与投影间距离之和,而LDA是最大化投影后类间距离,最小化投影后类内距离.<img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/PCA%E4%B8%8ELDA.png" class=""></li><li>投影方式肯定为:$y = w^{T}x$. 定义几个量来衡量目标函数$J(w)$.<br>投影后类均值:$m_{Y_{i}}=\frac{1}{N_{i}}\sum\limits_{y_{j} \in Y_{i}}y_{j}$<br>投影后类内离散度矩阵:$S_{Y_{i}}=\sum\limits_{y_{j} \in Y_{i}}||(y_{j}-m_{Y_{i}})||^{2}$<br>类间离散度矩阵:$S_{Y_{b}}=||m_{Y_{1}}-m_{Y_{2}}||^{2}$<br>总类内离散度矩阵:$S_{Y_{w}}=S_{Y_{1}}+S_{Y_{2}}$<br>与这类似的还有直接在$X$空间的一些量:<br>投影前类均值:$m_{X_{i}}=\frac{1}{N_{i}}\sum\limits_{x_{j} \in X_{i}}x_{j}$<br>投影前类内离散度矩阵:$S_{X_{i}}=\sum\limits_{x_{j} \in X_{i}}||(x_{j}-m_{X_{i}})||^{2}$<br>类间离散度矩阵:$S_{X_{b}}=P(\omega_{1})P(\omega_{2})||m_{X_{1}}-m_{X_{2}}||^{2}$<br>总类内离散度矩阵:$S_{X_{w}}=P(\omega_{1})S_{X_{1}}+P(\omega_{2})S_{X_{2}}$<br>于是目标函数:$J(w)=\frac{S_{Y_{b}}}{S_{Y_{w}}}=\frac{w^{T}S_{X_{b}}w}{w^{T}S_{X_{w}}w}$<br>解为:$w=S_{X_{w}}^{-1}(m_{X_{1}}-m_{X_{2}})$</li></ol><h1 id="隐马尔可夫模型"><a href="#隐马尔可夫模型" class="headerlink" title="隐马尔可夫模型"></a>隐马尔可夫模型</h1><h2 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h2><img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E9%9A%90%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B.png" class=""><p>任意时刻隐藏状态称为$\omega$,可见状态称为$v$.<br>图中$a$是概率转移矩阵里的元素,$b$是在每个状态下可见状态的概率分布.<br>隐藏状态序列为$\omega$,可见状态序列为$V$.<br>例如:<br>$\omega^{6}=${$\omega_{1},\omega_{3},\omega_{2},\omega_{2},\omega_{1},\omega_{3}$}<br>$V^{6}=${$v_{4},v_{1},v_{1},v_{4},v_{2},v_{3}$}<br>该模型需要解决的三个问题:估值问题,解码问题,学习问题.</p><h2 id="估值问题"><a href="#估值问题" class="headerlink" title="估值问题"></a>估值问题</h2><p>$a,b$已知,如何求解某个特定可见序列$V$.<br>$P(V^{t})=\sum\limits_{j=1}^{c}P(V^{t},\omega_{j})$</p><h3 id="前向算法"><a href="#前向算法" class="headerlink" title="前向算法"></a>前向算法</h3><img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E5%89%8D%E5%90%91%E7%AE%97%E6%B3%95.png" class=""><p>前向算法的思想:从$t-1$时刻的隐藏状态$\omega_{i}$转移到$t$时刻的隐藏状态$\omega_{j}$,再让$\omega_{j}$激发出可见状态$v_{i_{t}}$.<br>令$\alpha_{j}(t)=P(V^{t},\omega_{j}(t))$,那么<br>$\alpha_{j}(t)=\sum\limits_{i=1}^{c}P(V^{t-1},\omega_{i}(t-1))*P(\omega_{j}(t)|\omega_{i}(t-1))*P(v_{i_{t}}|\omega_{j})$,所以<br>$\alpha_{j}(t)=\sum\limits_{i=1}^{c}\alpha_{i}(t-1) a_{ij}b_{jk}$(假设$v_{i_{t}}=v_{k}$),初始条件为$\alpha_{j}(0)=1,j=\text{初始隐藏状态}$<br>$P(V^{t})=\sum\limits_{j=1}^{c}\alpha_{j}(t)$</p><h3 id="后向算法"><a href="#后向算法" class="headerlink" title="后向算法"></a>后向算法</h3><p>后向算法只要顺着往下走,先从$t$时刻隐藏状态$\omega_{i}$转移到$t+1$时刻的隐藏状态$\omega_{j}$,此时让$\omega_{j}$激发出可见状态$v_{i_{t+1}}$,再考虑从$\omega_{j}(t+1)$出发的概率$P(v_{i_{t+1}},\cdots,v_{i_{T}},\omega_{j}(t+1))$.<br>令$\beta_{j}(t)=P(v_{i_{t+1}},\cdots,v_{i_{T}},\omega_{j}(t))=P(V^{T-t},\omega_{j}(t))$(这种写法和$\beta_{j}(t)=P(v_{i_{t+1}},\cdots,v_{i_{T}}|\omega_{j}(t))=P(V^{T-t}|\omega_{j}(t))$一样),那么<br>$\beta_{j}(t)=\sum\limits_{i=1}^{c}P(\omega_{i}(t+1)|\omega_{j}(t)) * P(v_{k}|\omega_{i}(t+1)) * P(v_{i_{t+2}},\cdots,v_{i_{T}},\omega_{i}(t+1))=\sum\limits_{i=1}^{c}a_{ji}b_{ik}P(V^{T-(t+1)},\omega_{i}(t+1))=\sum\limits_{i=1}^{c}a_{ji}b_{ik}\beta_{i}(t+1)$,初始条件为$\beta_{i}(T)=1$<br>$P(V^{t})=\sum\limits_{j=1}^{c}\beta_{j}(0)$</p><h2 id="解码问题"><a href="#解码问题" class="headerlink" title="解码问题"></a>解码问题</h2><p>$a,b$和可见序列$V$已知,求解最有可能产生$V$的隐藏状态序列$\omega$.</p><img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E8%A7%A3%E7%A0%81%E8%BF%87%E7%A8%8B.png" class=""><p>这个问题的解决方法就是维特比算法,动态规划思想,下面简单阐述一下.<br>一种朴素的想法就是遍历所有可能的路径,然后找可能性最大的.很明显,太慢.那么就删去其中那些肯定不是最大可能性的路径.<br>假设出现的可见序列为$V=${$v_{1},v_{2},v_{3}$}.<br>第一步:<br>激发出{$v_{1}$}的可能路径为{01,02,03}三种,计算出三条路径的概率$P_{01}=a_{01}b_{11},P_{02}=a_{02}b_{21},P_{03}=a_{03}b_{31}$.<br>第二步:<br>激发出{$v_{1},v_{2}$}的可能路径有九条.先考虑都达到隐藏状态1的3条:{011,021,031}.计算出三条路径的概率$P_{011}=P_{01}a_{11}b_{12},P_{021}=P_{02}a_{21}b_{22},P_{031}=P_{03}a_{31}b_{32}$,然后找出其中最大的概率,那么其余两条路径就绝对不可能是激发出{$v_{1},v_{2},v_{3}$}的路径里最大的.同理,也可以去掉其余4条路径.最终在激发出{$v_{1},v_{2}$}的路径里保留了三条.假设为{011,012,033}.<br>第三步:<br>由于前面已经确定了可能是最大路径只有三条,所以激发出{$v_{1},v_{2},v_{3}$}的路径只有九条.同样先考虑到隐藏状态1的3条:{0111,0121,0331},也是一样计算出各自的概率,然后保留一个概率最大的路径.对于其余的状态一样处理.<br>第四步:<br>持续这个过程直到结束.<br>很显然,维特比算法的时间复杂度为$O(N^{2}T)$</p><h2 id="学习问题"><a href="#学习问题" class="headerlink" title="学习问题"></a>学习问题</h2><p>隐藏状态和可见状态的数目已知,然后给定大量样本(可见序列),如何求解$a,b$.<br>Baum-Welch算法(不好理解):<br>定义变量:<br>$\gamma_{ij}(t)=P(\omega_{i}(t-1),\omega_{j}(t)|V^{T})=\frac{P(\omega_{i}(t-1),\omega_{j}(t),V^{T})}{P(V^{T})}=\frac{\alpha_{i}(t-1)a_{ij}b_{jk}\beta_{j}(t)}{P(V^{T})}$.<br>更新公式为:<br>$a_{ij}=\frac{\sum\limits_{t=1}^{T}\gamma_{ij}(t)}{\sum\limits_{t=1}^{T}\sum\limits_{k}\gamma_{ik}(t)}$<br>$b_{jk}=\frac{\sum\limits_{t=1,v(t)=v_{k}}^{T}\sum\limits_{i}\gamma_{ij}(t)}{\sum\limits_{t=1}^{T}\sum\limits_{i}\gamma_{ij}(t)}$<br>先初始化$a,b$,然后进行$\gamma$的计算,再更新$a,b$,然后迭代直至收敛.(Baum-Welch算法是EM算法的一个例子,EM算法一定收敛,但是不一定是最值,可能只是个极值.而且这里计算$\gamma$的值时,和估值问题中的递归一样,感觉会很慢)<br>对公式的理解:通俗地讲就是在数数,然后估计频率.估计$a$时,分子就是从隐藏状态$\omega_{i}$进入隐藏状态$\omega_{j}$的数目,分母就是从隐藏状态$\omega_{i}$进入其他任意状态的数目,相除自然就是$a_{ij}$的估计;估计$b$时,每次进入隐藏状态$\omega_{j}$,必定会激发一个可见状态$v_{k}$,所以进入隐藏状态$\omega_{j}$的次数和在$\omega_{j}$时激发的可见状态数目是一样的,那么分子就是进入隐藏状态$\omega_{j}$且激发可见状态$v_{k}$的数目,分母就是进入隐藏状态$\omega_{j}$且激发任意可见状态的数目，相除自然就是$b_{jk}$的估计.</p><h1 id="非参数估计方法"><a href="#非参数估计方法" class="headerlink" title="非参数估计方法"></a>非参数估计方法</h1><p>在参数估计方法中,需要提前知道或假设基本的分布,然后将其参数化,这样就只要去估计那些参数值,如正态分布的均值,均匀分布的界限.这样的参数估计真的一定好吗?答案是否定的.非参数则无需概率分布,直接通过抽样的方法来估计分布或者是待估计的参数.</p><h2 id="Parzen窗"><a href="#Parzen窗" class="headerlink" title="Parzen窗"></a>Parzen窗</h2><p>一个向量$x$落在区域$R$的概率为$P=\int\limits_{R}p(x)dx$.如果$R$很小,那么可以认为在区域内$p(x)$是个常数,所以$P=p(x)V$,其中$V$是$R$的体积.<br>另一方面,根据大数定律,$P=\frac{k}{n}$(这个$n$是每一类的总数),其中$k$是落在区域内的样本个数,$n$是样本总数.于是,在区域$R$内,$p(x)=\frac{k}{nV}$.<br>Parzen窗方法中,先选取$V$,然后去计算有多少个样本($k$)落在这个区域内.(通俗的讲,就是:对于一个测试样本,拿这个样本以及一个包含这个样本的窗(矩形窗,高斯窗等)去每个类里进行覆盖(就是一个一个判断有没有盖中).盖中多少个训练样本,就认为$k$是多少)</p><ol><li>区域是矩形窗时:<img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/%E7%9F%A9%E5%BD%A2%E7%AA%97.jpg" class="">$V=h^{d}$<br>用来计算$k$的函数为:<br>$\phi(u)=<br>\begin{cases}<br>1 &amp; |u_{j} \le \frac{1}{2}|,j=1,2,\cdots,d \\<br>0 &amp; \text{otherwise}<br>\end{cases}<br>$<br>$k=\sum\limits_{i=1}^{n}\phi(\frac{x-x_{i}}{h})$</li><li>区域是高斯窗时:<br>$V=\frac{1}{\sqrt{2\pi}\sigma}$<br>$\phi(\frac{x-x_{i}}{\sigma})=\exp(\frac{-(x-x_{i})^{T}(x-x_{i})}{2\sigma^{2}})$<br>$k=\sum\limits_{i=1}^{n}\phi(\frac{x-x_{i}}{h})$</li></ol><h3 id="PNN"><a href="#PNN" class="headerlink" title="PNN"></a>PNN</h3><p>PNN全称概率神经网络,一个PNN的图片如下:</p><img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/PNN1.png" class=""><p>图中,Input Layer是用来输入测试样本的($d$维);Pattern Layer是直接用训练集中的样本构成的,图中是3类,第一类有2个样本,第2类有2个样本,第3类有3个样本,计算该层的输出$y$,其实就是Parzen窗的那个覆盖步骤;Summation Layer是在计算这个测试样本属于每一类的概率,也就是图中的$g$;Output Layer是决定这个测试样本到底属于哪一类,图中就是看哪个$g$最大.</p><h3 id="PNN训练"><a href="#PNN训练" class="headerlink" title="PNN训练"></a>PNN训练</h3><img src="/2020/03/14/%E6%A8%A1%E5%BC%8F%E8%AF%86%E5%88%AB/PNN2.png" class=""><p>PNN训练时就做两件事:</p><ol><li>得到Pattern Layer和Input Layer之间的连接权重$w$</li><li>得到Pattern Layer所属的类</li></ol><p>假设从$c$类中随机抽取$n$个样本.那么<br>$w_{i}$(第$i$个样本与输入的连接权重)为$w_{ik}=\frac{x_{ik}}{(\sum\limits_{l=1}^{d}x_{il}^{2})^{\frac{1}{2}}}$<br>$a_{ij}=1$,如果第$i$个样本属于第$j$类</p><h3 id="PNN分类"><a href="#PNN分类" class="headerlink" title="PNN分类"></a>PNN分类</h3><p>以高斯窗为例子:<br>先计算测试样本$x$与每一个训练样本的$g_{i}=\exp(\frac{w_{i}^{T}x-1}{\sigma^{2}})$,再计算每一类的概率(判断属于哪一类就是用$a_{ij}$)即:将每类的$g_{i}$求和,最后根据每一类的概率来判断这个测试样本最终属于哪一类.</p><h2 id="K-近邻"><a href="#K-近邻" class="headerlink" title="K-近邻"></a>K-近邻</h2><p>Parzen窗是选定$V$,然后去计算$k$;K-近邻则是反过来,选定$k$,去计算$V$.<br>对于一个测试样本$x$,计算距离这个样本最近的$k$个训练样本,然后找出其中最远的那个样本,距离记为$R$,那么就可以计算出$V$(一维时$V=2R$,二维时$V=\pi R^{2}$,以此类推).<br>分类时就看最近的$k$个样本都属于哪些类,后验概率$p(\omega_{i}|x)=\frac{k_{i}}{k}$</p><h3 id="计算复杂度"><a href="#计算复杂度" class="headerlink" title="计算复杂度"></a>计算复杂度</h3><p>KNN的计算复杂度很高,下面提出几种方法来减小复杂度:</p><ol><li>计算部分距离:$D(a,b)=(\sum\limits_{k=1}^{r}(a_{k}-b_{k}^{2}))^{\frac{1}{2}},r \le d$,即丢弃一些特征</li><li>丢弃一些样本</li><li>预先建立数据结构,如kd树</li></ol><h1 id="模糊理论基础"><a href="#模糊理论基础" class="headerlink" title="模糊理论基础"></a>模糊理论基础</h1><h2 id="为什么需要模糊理论？"><a href="#为什么需要模糊理论？" class="headerlink" title="为什么需要模糊理论？"></a>为什么需要模糊理论？</h2><p>经典集合论中,一个元素与一个集合之间的关系只有”属于”和”不属于”两种,但是实际生活中并不是非黑即白,所以需要一个概念来描述”属于的程度”.</p><h2 id="模糊和概率"><a href="#模糊和概率" class="headerlink" title="模糊和概率"></a>模糊和概率</h2><h3 id="相同"><a href="#相同" class="headerlink" title="相同"></a>相同</h3><ol><li>都研究不确定现象</li><li>不确定性的度量都是[0,1]</li></ol><h3 id="不同"><a href="#不同" class="headerlink" title="不同"></a>不同</h3><p>概率论所研究的随机现象，事件本身含义明确，只是事件的发生与否存在不确定性，这种不确定性称为随机性;模糊数学所研究的模糊现象，事物的概念本身是模糊的，因此一个对象是否符合这个概念难以确定，称这种不确定性为模糊性.</p><h2 id="模糊集合论"><a href="#模糊集合论" class="headerlink" title="模糊集合论"></a>模糊集合论</h2><p>经典集合论中,每个集合都有一个特征函数<br>$C_{A}(x)=<br>\begin{cases}<br>1 &amp; \text{if x} \in A \\<br>0 &amp; otherwise<br>\end{cases}<br>$<br>模糊集合论中就把这个进行发展,使每个集合都有一个隶属函数$\mu_{A}(x)$,其值域是[0,1]<br>一个模糊集$A$可以表示为$A=${$(x_{1},\mu_{1}),(x_{2},\mu_{2}),\cdots,(x_{n},\mu_{n})$},其中$x$是描述的对象,$\mu$是该对象属于集合$A$的程度.</p><h2 id="模糊集运算"><a href="#模糊集运算" class="headerlink" title="模糊集运算"></a>模糊集运算</h2><p>$A=\varnothing \Leftrightarrow \forall u,\mu_{A}(u)=0$<br>$A=B \Leftrightarrow \forall u,\mu_{A}(u)=\mu_{B}(u)$<br>$A \subseteq B  \Leftrightarrow \forall u,\mu_{A}(u) \le \mu_{B}(u)$<br>$A \cup B \Leftrightarrow \forall u,\mu_{A \cup B}(u)=\max(\mu_{A}(u),\mu_{B}(u))$<br>$A \cap B \Leftrightarrow \forall u,\mu_{A \cap B}(u)=\min(\mu_{A}(u),\mu_{B}(u))$<br>$A^{C} \Leftrightarrow \forall u,\mu_{A^{C}}(u)=1-\mu_{A}(u)$<br>集合间运算的那些定律,如吸收率,分配率等等,和经典集合论一样都成立,只有一条互余律不成立,即:$A^{C} \cup A \neq U,A^{C} \cap A \neq \varnothing$</p><h2 id="lambda-截集"><a href="#lambda-截集" class="headerlink" title="$\lambda$ 截集"></a>$\lambda$ 截集</h2><p>$A_{\lambda}$定义为$A_{\lambda}=${$x|A(x) \ge \lambda$},就是把隶属程度小于$\lambda$的对象舍弃,这是个经典集</p><h3 id="分解定理"><a href="#分解定理" class="headerlink" title="分解定理"></a>分解定理</h3><p>定义$\lambda$与$A$的乘积$\lambda A$:<br>$\lambda A(x)=<br>\begin{cases}<br>\lambda &amp; A(x) &gt; \lambda \\<br>A(x) &amp; A(x) \le \lambda<br>\end{cases}<br>$<br>那么,<br>$A=\bigcup\limits_{\lambda \in [0,1]} \lambda A_{\lambda}$<br>分解定理表明:模糊集合$A$可以由一个经典集合族{$A_{\lambda}︱0 \le \lambda  \le 1$}来等价,一个模糊集合是无数个经典集合的并集.</p><h3 id="扩张原理"><a href="#扩张原理" class="headerlink" title="扩张原理"></a>扩张原理</h3><p>问题就是:如果$A$是模糊集合,那么$f(A)$是个啥?<br>明显,$f(A)仍然应该是一个模糊集合.那么,$定义:$f(A)(x)=\max${$A(u)|f(u)=x$}.<br>如果用分解定理的形式给出,就为:$f(A)=\bigcup\limits_{\lambda \in [0,1]}\lambda f(A_{\lambda})$</p>]]></content>
       
-      
-      <categories>
-          
-          <category> 杂 </category>
-          
-      </categories>
       
       
     </entry>
@@ -233,16 +154,6 @@
         <content type="html"><![CDATA[<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><ol><li>和Possion Process类似,只是等待时间的概率分布不一定是指数分布</li><li>令$M(t)=E[N(t)]$,可推得$M(t)=\sum\limits_{k=1}^{\infty}F_{k}(t)$,其中$F_{k}(t)$就是第k次更新时刻的概率分布(计算$F_{k}$得靠递归,一般没法计算)</li></ol><h1 id="计数器模型"><a href="#计数器模型" class="headerlink" title="计数器模型"></a>计数器模型</h1><h2 id="I-型"><a href="#I-型" class="headerlink" title="I 型"></a><strong><em>I</em></strong> 型</h2><p>1.现实模型是粒子计数器,如:Geiger-Muller计数器</p><img src="/2020/03/11/%E6%9B%B4%E6%96%B0%E8%BF%87%E7%A8%8B/type_I.png" class=""><p>$X_{i}$是粒子达到的时刻间隔($X_{i}$独立同分布);$Y_{i}$(独立同分布)是粒子达到后计数器的锁定时间,此时无法记录到达的粒子;$Z_{i}$是记录到的粒子时刻间隔.明显{$Z_{i}$}是独立同分布的,所以构成了一个更新过程.<br>2. 只要搞出$Z_{1}$的分布就ok.<br>$Z_{1}=Y_{1}+\gamma_{Y_{1}}$($\gamma$是excess life,在Possion Process中是指数分布),所以:<br>$P(Z_{1} \le z)=\int\limits_{0}^{z}P(y+\gamma_{y} \le z|Y_{1}=y)dG(y)$,其中$G(y)$是$Y_{1}$的分布.<br>在Possion Process下,$P(Z_{1} \le z)=\int\limits_{0}^{z}G(z-y) \lambda e^{-\lambda y}dy$</p><h2 id="II-型"><a href="#II-型" class="headerlink" title="II 型"></a><strong><em>II</em></strong> 型</h2><img src="/2020/03/11/%E6%9B%B4%E6%96%B0%E8%BF%87%E7%A8%8B/type_II.png" class=""><p>与type_I型不同的是,在锁定时间内如果还达到了新的粒子,是有可能会延长锁定时间的.<br>这种情况很复杂,在此给出一个简单结论:假设在时间(0,t]内粒子到达的时刻服从均匀分布.则<br>P(在时刻t计数器是自由的|(0,t]时间内达到了n个粒子)=$(\int\limits_{0}^{t}G(t-y)\frac{1}{t}dy)^{n}$<br>理解为:粒子在时刻y到达的概率为$\int\limits_{y}^{y+dy}\frac{1}{t}du=\frac{1}{t}dy$,锁定时间在t时刻已经结束的概率为$G(t-y)$(也就是锁定时间小于等于t-y的概率),再对所有时刻积分就得到一个粒子的情况.n个粒子的是独立的,所以再求幂.<br>假设在(0,t]时间内出现粒子的个数服从泊松分布,那么时刻t计数器处于自由的概率为:<br>$p(t)=\sum\limits_{j=0}^{\infty}(\int\limits_{0}^{t}G(t-y)\frac{1}{t}dy)^{j}\frac{(\lambda t)^{j}e^{-\lambda t}}{j!}=e^{-\lambda\int\limits_{0}^{t}[1-G(y)]dy}$(注意把公式中的积分整体当成H(t))<br>在时间(0,t]内记录到的粒子的期望个数$M_{R}(t)=\lambda p(t)$,$M_{R}=0$(推导过程基本理解了,但有一处仍然有疑问)</p>]]></content>
       
       
-      <categories>
-          
-          <category> 数学 </category>
-          
-          <category> 随机过程 </category>
-          
-          <category> 更新过程 </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -255,12 +166,6 @@
       
         <content type="html"><![CDATA[<h1 id="典型的一个神经元"><a href="#典型的一个神经元" class="headerlink" title="典型的一个神经元"></a>典型的一个神经元</h1><img src="/2020/03/09/%E7%A5%9E%E7%BB%8F%E5%85%83%E5%92%8C%E7%A5%9E%E7%BB%8F%E8%83%B6%E8%B4%A8/neuron.png" class="" title="神经元">]]></content>
       
-      
-      <categories>
-          
-          <category> 神经科学 </category>
-          
-      </categories>
       
       
     </entry>
@@ -275,16 +180,6 @@
         <content type="html"><![CDATA[<h1 id="Possion-Process"><a href="#Possion-Process" class="headerlink" title="Possion Process"></a>Possion Process</h1><ol><li>Possion Process就是一种独立增量过程,每次增加最多为1.典型例子就是一段时间内接电话次数</li><li>Possion Process的三条性质:<br>(i)$P${$X(t+h)-X(t)=1|X(t)=k$}$=\lambda h + o(h)$ (增加1的情况)<br>(ii)$P${$X(t+h)-X(t)=0|X(t)=k$}$=1 - \lambda h + o(h)$(增加0的情况)<br>(iii)$X(0) = 0$(初始状态次数为0)</li><li>直观上理解:每个等待时间都是个指数分布,参数为$\lambda$.为啥叫泊松分布呢?我觉得是因为:$P${$X(t)=n$}$=\frac{(\lambda t)^{n}e^{-\lambda t}}{n!}$,即:间隔$t$时间内发生次数的概率分布是泊松分布.</li></ol><h1 id="Birth-Process"><a href="#Birth-Process" class="headerlink" title="Birth Process"></a>Birth Process</h1><ol><li>为何叫Birth Process?因为这一过程来源于生物的繁殖.Birth Process与Possion Process区别就在于，这里面的$\lambda$是和已发生事件的次数有关的，即$\lambda$和$k$有关</li><li>于是Possion Process的三个条件就变为:<br>(i)$P${$X(t+h)-X(t)=1|X(t)=k$}$=\lambda_{k} h + o_{1,k}(h)$ (增加1的情况)<br>(ii)$P${$X(t+h)-X(t)=0|X(t)=k$}$=1 - \lambda_{k} h + o_{2,k}(h)$(增加0的情况)<br>(iii)$X(0) = 0$(初始状态次数为0)<br>这里的无穷小$o(h)$和$n,k$有关，原因暂时未知</li><li>定义$P_{n}(t)=P${$X(t)=n$},那么可以依靠上述性质得到一组递归表示的微分方程:<br>$P_{0}^{，}(t)=-\lambda_{0}P_{0}(t)$和$P_{n}^{，}(t)=-\lambda_{n}P_{n}(t)+\lambda_{n-1}P_{n-1}(t)$.这玩意只能递归求解(对于Poisson Process倒是可以归纳求解),其解为:$P_{k}(t)=\lambda_{k-1}e^{-\lambda_{k}t}\int\limits_{0}^{t}e^{\lambda_{k}x}P_{k-1}(x)dx$以及$P_{0}(t)=e^{-\lambda_{0}t}$.</li></ol><h1 id="Yule-Process"><a href="#Yule-Process" class="headerlink" title="Yule Process"></a>Yule Process</h1><ol><li>Yule Process是物理和生物中的一种Birth Process.特殊性在于,$X(0)=N$和$\lambda_{k}=k \beta$</li><li>当$N=1$时，可解得$P_{n}(t)=e^{-\beta t}(1-e^{-\beta t})^{n-1}$和$P_{1}(0)=0$</li><li>当$N$大于1时,解为:$P_{n}(t)=\binom{n-1}{n-N}e^{-N \beta t}(1-e^{-\beta t})^{n-N},n=N,N+1…$</li></ol><h1 id="Possion-Process可以产生二项分布"><a href="#Possion-Process可以产生二项分布" class="headerlink" title="Possion Process可以产生二项分布"></a>Possion Process可以产生二项分布</h1><ol><li>$P${$X(u)=k|X(t)=n$}$=\binom{n}{k}\frac{u^{k}(t-u)^{n-k}}{t^{n}}$</li><li>对于两个独立的Possion Process:$X_{1}(t)$和$X_{2}(t)$:<br>$P${$X_{1}(t)=k|X_{1}(t)+X_{2}(t)=n$}$=\binom{n}{k}(\frac{\lambda_{1}}{\lambda_{1}+\lambda_{2}})^{k}(\frac{\lambda_{2}}{\lambda_{1}+\lambda_{2}})^{n-k}$</li></ol><h1 id="Birth-and-Death-Process"><a href="#Birth-and-Death-Process" class="headerlink" title="Birth and Death Process"></a>Birth and Death Process</h1><ol><li>比Birth多了个Death过程,参数也就不止$\lambda_{k}$,还有$\mu_{k}$</li><li>转移概率的性质也变了一些:<br>(i)$P_{i,i+1}(h)=\lambda_{i}h+o(h)$<br>(ii)$P_{i,i-1}(h)=\mu_{i}h+o(h)$<br>(iii)$P_{i,i}(h)=1-(\lambda_{i}+\mu_{i})h+o(h)$</li><li>这种模型的例子有:线性增长($\lambda$和$\mu$是线性函数)模型,排队模型,基因模型</li><li>直观上理解:等待时间是个指数分布(参数为$\lambda_{i}+\mu_{i}$);突变时,+1概率为$\frac{\lambda_{i}}{\lambda_{i}+\mu_{i}}$,-1概率为$\frac{\mu_{i}}{\lambda_{i}+\mu_{i}}$</li></ol><h1 id="有限状态连续时间Markov-Chain"><a href="#有限状态连续时间Markov-Chain" class="headerlink" title="有限状态连续时间Markov Chain"></a>有限状态连续时间Markov Chain</h1><ol><li>和离散时间类似:$P(t+s)=P(t)P(s)$</li></ol>]]></content>
       
       
-      <categories>
-          
-          <category> 数学 </category>
-          
-          <category> 随机过程 </category>
-          
-          <category> 马尔可夫链 </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -298,16 +193,6 @@
         <content type="html"><![CDATA[<h1 id="该章主要讲重现态和暂态进入重现态的概率-极限状态下"><a href="#该章主要讲重现态和暂态进入重现态的概率-极限状态下" class="headerlink" title="该章主要讲重现态和暂态进入重现态的概率(极限状态下)"></a>该章主要讲重现态和暂态进入重现态的概率(极限状态下)</h1><ol><li>正重现非周期马尔可夫链(现实的绝大多数都是这个)的平稳概率分布(其实就是从重现态到重现态):$\lim\limits_{n\rightarrow\infty}P_{ij}^{n}=\lim\limits_{n\rightarrow\infty}P_{jj}^{n}= \pi_{j}=\sum\limits_{i=0}^{\infty} \pi_{i}P_{ij}$.再加上$\sum\limits_{i=0}^{\infty} \pi_{i}=1$,可以唯一决定$\pi_{i}$</li><li>从暂态$i$到重现态$j$. $\lim\limits_{n\rightarrow\infty}P_{ij}^{n}= \pi_{i}(C)\pi_{j}$.如何计算$\pi_{i}(C)$:$\pi_{i}(C)=\pi_{i}^{1}(C)+\sum\limits_{k}P_{ik}\pi_{k}(C)$($i$和$k$是暂态,$k \neq i$)</li><li>判断一个马尔可夫链是不是暂时性的充分必要条件: 方程组$\sum\limits_{j=0}^{\infty}P_{ij}y_{j}=y_{i},i \neq 0$有一组有界且不恒等的解</li><li>判断一个马尔可夫链是不是重现性的充分条件: 不等式组$\sum\limits_{j=0}^{\infty}P_{ij}y_{j} \leq  y_{i},i \neq 0$,当$y_{i} \rightarrow \infty$时存在一组解</li></ol>]]></content>
       
       
-      <categories>
-          
-          <category> 数学 </category>
-          
-          <category> 随机过程 </category>
-          
-          <category> 马尔可夫链 </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -318,18 +203,8 @@
       <link href="/2020/03/08/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE/"/>
       <url>/2020/03/08/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE/</url>
       
-        <content type="html"><![CDATA[<h1 id="该章讲一些马尔可夫链的基本定义和例子"><a href="#该章讲一些马尔可夫链的基本定义和例子" class="headerlink" title="该章讲一些马尔可夫链的基本定义和例子"></a>该章讲一些马尔可夫链的基本定义和例子</h1><ol><li>转移矩阵$P$(一步转移矩阵),在平稳下是不变的，非平稳的情况很复杂</li><li>典型的Markov例子:随机游走，排队模型</li><li>n步转移矩阵$P^{(n)}=P^{n}$</li><li>周期性(定义比较奇怪):对于一个状态,该状态的周期定义为:从该状态出发,所有可以回到该状态的步数n的gcd.gcd为1时即该状态非周期.一个Markov链所有状态都为非周期时就称为这个Markov链是非周期的.下图状态1就有{4,8,12…}和{3,6,9…}以及两种相加如{7,10,11,13…}.这些的gcd为1,所以状态1是非周期的<img src="/2020/03/08/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE/state.png" class="" title="状态机作个例子 b"></li><li>重现性(recurrence):从一个状态出发,首次回到该状态的概率为1.$\sum\limits_{n=1}^{\infty}f_{ii}^{n}=1$,等价于$\sum\limits_{n=1}^{\infty}P_{ii}^{n}=\infty$(回到起始状态的期望步数,注意首次).重现性(以及暂时性)和周期性一样，是个类性质，只要类中有一个是可重现的，那就都是.</li><li>重现性经典例子:一维和二维随机游走.三维随机游走就不具有重现性.</li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="该章讲一些马尔可夫链的基本定-例子"><a href="#该章讲一些马尔可夫链的基本定-例子" class="headerlink" title="该章讲一些马尔可夫链的基本定:例子"></a>该章讲一些马尔可夫链的基本定:例子</h1><ol><li>转移矩阵$P$(一步转移矩阵),在平稳下是不变的，非平稳的情况很复杂</li><li>典型的Markov例子:随机游走，排队模型</li><li>n步转移矩阵$P^{(n)}=P^{n}$</li><li>周期性(定义比较奇怪):对于一个状态,该状态的周期定义为:从该状态出发,所有可以回到该状态的步数n的gcd.gcd为1时即该状态非周期.一个Markov链所有状态都为非周期时就称为这个Markov链是非周期的.下图状态1就有{4,8,12…}和{3,6,9…}以及两种相加如{7,10,11,13…}.这些的gcd为1,所以状态1是非周期的<img src="/2020/03/08/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE/state.png" class="" title="状态机作个例子 b"></li><li>重现性(recurrence):从一个状态出发,首次回到该状态的概率为1.$\sum\limits_{n=1}^{\infty}f_{ii}^{n}=1$,等价于$\sum\limits_{n=1}^{\infty}P_{ii}^{n}=\infty$(回到起始状态的期望步数,注意首次).重现性(以及暂时性)和周期性一样，是个类性质，只要类中有一个是可重现的，那就都是.</li><li>重现性经典例子:一维和二维随机游走.三维随机游走就不具有重现性.</li></ol>]]></content>
       
-      
-      <categories>
-          
-          <category> 数学 </category>
-          
-          <category> 随机过程 </category>
-          
-          <category> 马尔可夫链 </category>
-          
-      </categories>
       
       
     </entry>

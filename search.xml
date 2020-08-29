@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>混沌幻想2</title>
-      <link href="/2020/04/19/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32/"/>
-      <url>/2020/04/19/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32/</url>
-      
-        <content type="html"><![CDATA[<h1 id="真结局"><a href="#真结局" class="headerlink" title="真结局"></a>真结局</h1><img src="/2020/04/19/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32.png" class=""><h1 id="反伤回血流"><a href="#反伤回血流" class="headerlink" title="反伤回血流"></a>反伤回血流</h1><p>注意点:</p><ol><li>1区要多升级充能技能</li><li>2区有暴杀怪,要把攻击加到76</li><li>4区到远古电子时要把噬心之火加到2级,之后就随便打了<img src="/2020/04/19/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32/%E5%8A%A0%E7%82%B91.png" class=""><img src="/2020/04/19/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32/%E5%8A%A0%E7%82%B92.png" class=""><img src="/2020/04/19/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32/%E5%8A%A0%E7%82%B93.png" class=""><img src="/2020/04/19/%E6%B7%B7%E6%B2%8C%E5%B9%BB%E6%83%B32/%E5%8A%A0%E7%82%B94.png" class="">可惜这次没能把真空把和先之先点满.<br>爆攻流不知道怎么打,都活不到3区.</li></ol>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>surrogate data</title>
       <link href="/2020/04/07/surrogate-data/"/>
       <url>/2020/04/07/surrogate-data/</url>
@@ -43,32 +30,6 @@
     
     
     <entry>
-      <title>总结的几种方式</title>
-      <link href="/2020/04/02/%E6%80%BB%E7%BB%93%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/"/>
-      <url>/2020/04/02/%E6%80%BB%E7%BB%93%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</url>
-      
-        <content type="html"><![CDATA[<h1 id="结果罗列"><a href="#结果罗列" class="headerlink" title="结果罗列"></a>结果罗列</h1><p>一点一点的列举结果,方便可以再次回顾以及寻找事物之间的联系</p><h1 id="问题导向"><a href="#问题导向" class="headerlink" title="问题导向"></a>问题导向</h1><p>这可以从各种论坛,贴吧,知乎中寻找大家都关注的问题,或者自己从书中提出问题,然后回答.</p><h1 id="事物发展顺序"><a href="#事物发展顺序" class="headerlink" title="事物发展顺序"></a>事物发展顺序</h1><p>经典的如:以时间来列举事件,这些事件可以总的用来说明一件事情或是得出一个结论.</p><h1 id="直接转载"><a href="#直接转载" class="headerlink" title="直接转载"></a>直接转载</h1><p>网上很多Blog都是这样,经常见的就像csdn,转载时不看内容,甚至把错的东西也一起转载了.</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>昆仑镜</title>
-      <link href="/2020/03/26/%E6%98%86%E4%BB%91%E9%95%9C/"/>
-      <url>/2020/03/26/%E6%98%86%E4%BB%91%E9%95%9C/</url>
-      
-        <content type="html"><![CDATA[<h1 id="3绿结局-我太弱了"><a href="#3绿结局-我太弱了" class="headerlink" title="3绿结局,我太弱了"></a>3绿结局,我太弱了</h1><img src="/2020/03/26/%E6%98%86%E4%BB%91%E9%95%9C/%E6%98%86%E4%BB%913%E7%BB%BF.png" class=""><h1 id="6绿结局"><a href="#6绿结局" class="headerlink" title="6绿结局"></a>6绿结局</h1><img src="/2020/03/26/%E6%98%86%E4%BB%91%E9%95%9C/%E6%98%86%E4%BB%916%E7%BB%BF.png" class="">]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>QR分解与最小二乘</title>
       <link href="/2020/03/25/QR%E5%88%86%E8%A7%A3%E4%B8%8E%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98/"/>
       <url>/2020/03/25/QR%E5%88%86%E8%A7%A3%E4%B8%8E%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98/</url>
@@ -87,19 +48,6 @@
       <url>/2020/03/25/Levinson/</url>
       
         <content type="html"><![CDATA[<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><p>目标就是求解如下方程:<br>$R * a=-r$<br>其中$R=<br>\left(<br>    \begin{matrix}<br>    R(0) &amp; R(1) &amp; \cdots &amp; R(N-1) \\<br>    R(1) &amp; R(0) &amp; \cdots &amp; R(N-2) \\<br>    \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\<br>    R(N-1) &amp; R(N-2) &amp; \cdots &amp; R(0)<br>    \end{matrix}<br>\right)<br>$,$a=<br>\left(<br>    \begin{matrix}<br>    a(1) \\<br>    a(2) \\<br>    \vdots \\<br>    a(N)<br>    \end{matrix}<br>\right)<br>$,$r=<br>\left(<br>    \begin{matrix}<br>    R(1) \\<br>    R(2) \\<br>    \vdots \\<br>    R(N)<br>    \end{matrix}<br>\right)<br>$</p><h1 id="具体算法"><a href="#具体算法" class="headerlink" title="具体算法"></a>具体算法</h1><p>Levinson算法是个递归算法,先拿低阶举例说明一下,然后解释一般递归过程.</p><h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>当$N=1$时,先计算出$a(1)$:$R(0) * a_{1}(1)=-R(1)$,所以$a_{1}(1)=-\frac{R(1)}{R(0)}$<br>当$N=2$时,有:<br>$R(0) * a_{2}(1)+R(1) * a_{2}(2)=-R(1)$<br>$R(1) * a_{2}(1)+R(0) * a_{2}(2)=-R(2)$<br>将$R(1)=-a_{1}(1)*R(0)$代进去.得到<br>$a_{2}(2)=-\frac{R(2)+R(1)a_{1}(1)}{R(0)[1-a_{1}^{2}(1)]}$<br>$a_{2}(1)=a_{1}(1)+a_{2}(2) * a_{1}(1)$<br>至此,用低阶的系数$a_{1}(1)$,表达出了高阶系数$a_{2}(1),a_{2}(2)$</p><h2 id="推广"><a href="#推广" class="headerlink" title="推广"></a>推广</h2><p>设$a_{N}=<br>\left(<br>    \begin{matrix}<br>    a_{N}(1) \\<br>    a_{N}(2) \\<br>    \vdots \\<br>    a_{N}(N)<br>    \end{matrix}<br>\right)=<br>\left(<br>    \begin{matrix}<br>    a_{N-1} \\<br>    0<br>    \end{matrix}<br>\right)+<br>\left(<br>    \begin{matrix}<br>    d_{N-1} \\<br>    \lambda_{N}<br>    \end{matrix}<br>\right)<br>$<br>令$R_{N}=<br>\left(<br>    \begin{matrix}<br>    R_{N-1} &amp; r_{N-1}^{b} \\<br>    r_{N-1}^{bT} &amp; R(0)<br>    \end{matrix}<br>\right)<br>$,其中b是把向量里的顺序反转.<br>于是有:$<br>\left(<br>    \begin{matrix}<br>    R_{N-1} &amp; r_{N-1}^{b} \\<br>    r_{N-1}^{bT} &amp; R(0)<br>    \end{matrix}<br>\right)<br>\left(<br>    \left(<br>        \begin{matrix}<br>        a_{N-1} \\<br>        0<br>        \end{matrix}<br>    \right)+<br>    \left(<br>        \begin{matrix}<br>        d_{N-1} \\<br>        \lambda_{N}<br>        \end{matrix}<br>    \right)<br>\right)=<br>-\left(<br>    \begin{matrix}<br>    r_{N-1} \\<br>    R(N)<br>    \end{matrix}<br>\right)<br>$<br>即为:<br>\begin{equation}<br>\label{eq:1}<br>R_{N-1}a_{N-1}+R_{N-1}d_{N-1}+\lambda_{N}r_{N-1}^{b}=-r_{N-1} \tag{1}<br>\end{equation}<br>\begin{equation}<br>\label{eq:2}<br>r_{N-1}^{bT}a_{N-1}+r_{N-1}^{bT}d_{N-1}+\lambda_{N}R(0)=-R(N) \tag{2}<br>\end{equation}<br>注意到$R_{N-1}a_{N-1}=-r_{N-1}$,于是在公式\eqref{eq:1}中,可以解得$d_{N-1}=-\lambda_{N}R_{N-1}^{-1}r_{N-1}^{b}=\lambda_{N}a_{N-1}^{b}$<br>代入公式\eqref{eq:2}并注意到$r_{N-1}^{bT}a_{N-1}^{bT}=r_{N-1}^{T}a_{N-1}$,可解得$\lambda_{N}=-\frac{R(N)+r_{N-1}^{bT}a_{N-1}}{R(0)+r_{N-1}^{T}a_{N-1}}$<br>$d_{N-1}$和$\lambda_{N}$都有了,所以<br>$a_{N}(k)=a_{N-1}(k)+d_{N-1}(k),k=1,2,\cdots,N-1$<br>$a_{N}(N)=\lambda_{N}$</p><h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><p>计算(MV)AR模型的系数,此时$R$就是信号的自相关</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>拯救第二皇女</title>
-      <link href="/2020/03/24/%E6%8B%AF%E6%95%91%E7%AC%AC%E4%BA%8C%E7%9A%87%E5%A5%B3/"/>
-      <url>/2020/03/24/%E6%8B%AF%E6%95%91%E7%AC%AC%E4%BA%8C%E7%9A%87%E5%A5%B3/</url>
-      
-        <content type="html"><![CDATA[<p>三种结局,作者参考了魔女之家的结局.<br>BE:先打顶楼,再打河边.由于顶楼有很多补给,所以这个结局最容易打.</p><img src="/2020/03/24/%E6%8B%AF%E6%95%91%E7%AC%AC%E4%BA%8C%E7%9A%87%E5%A5%B3/be.png" class=""><p>NE:先打河边,再打顶楼,最后打地下,补给只对地下BOSS有用,相对简单.</p><img src="/2020/03/24/%E6%8B%AF%E6%95%91%E7%AC%AC%E4%BA%8C%E7%9A%87%E5%A5%B3/ne.png" class=""><p>HE:先打河边,然后直接打地下,顶楼不用打.由于没有顶楼的补给,而且还得省下3把蓝,难度比较大,得多计算和尝试.</p><img src="/2020/03/24/%E6%8B%AF%E6%95%91%E7%AC%AC%E4%BA%8C%E7%9A%87%E5%A5%B3/he.png" class="">]]></content>
       
       
       
